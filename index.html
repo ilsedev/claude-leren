@@ -3,22 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stijl.css">
 <title>Claude leren</title>
-<style>
-  body{font-family:system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 16px;color:#222;background:#fff}
-  h1{font-size:1.6rem} li{margin:0 0 1rem} a{color:#0a58ca;font-weight:600}
-  small{color:#666;display:block}
-</style>
 </head>
 <body>
-<h1>Claude leren</h1>
-<ul id="lijst"><li>Nog geen filmpjes.</li></ul>
+<nav><div class="nav-in"><a class="logo" href="https://promptstad.nl"><span class="dot"></span>Promptstad</a><a class="knop actief" href="./">Claude leren</a></div></nav>
+<div class="band"><h1><span>Claude leren:</span> kijken en onthouden</h1></div>
+<div class="intro"><p>Korte filmpjes als geheugensteun voor Claude Code. Eerst het idee, dan zie je het in Claude gebeuren.</p></div>
+<main><div class="inner"><div class="kaarten" id="lijst"><p>Nog geen filmpjes.</p></div></div></main>
 <script>
 fetch('filmpjes.json',{cache:'no-store'}).then(r=>r.json()).then(f=>{
   if(!f.length) return;
-  f.sort((a,b)=>b.datum.localeCompare(a.datum));
-  document.getElementById('lijst').innerHTML=f.map(x=>
-    `<li><a href="${x.slug}/">${x.titel}</a><small>${x.datum} · ${x.omschrijving||''}</small></li>`).join('');
+  f.sort((a,b)=>a.slug.localeCompare(b.slug));
+  document.getElementById('lijst').innerHTML=f.map(x=>{
+    const [deel,...rest]=x.titel.split(' · ');
+    return `<a class="kaart" href="${x.slug}/"><div class="label">${rest.length?deel:x.datum}</div><h2>${rest.length?rest.join(' · '):x.titel}</h2><p>${x.omschrijving||''}</p></a>`;
+  }).join('');
 });
 </script>
 </body>

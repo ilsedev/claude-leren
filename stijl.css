@@ -1,0 +1,27 @@
+/* Huisstijl van promptstad.nl */
+:root{--navy:#0D1B3E;--accent:#C9A84C;--accent-dim:#8B6B20;--wit:#fff;--bg:#c5c5e6;--bg-2:#ECECF4;--tekst:#1A2340;--tekst-zacht:#5C6480;--radius:12px}
+*{box-sizing:border-box}
+body{margin:0;font-family:'DM Sans',sans-serif;color:var(--tekst);background:var(--bg-2)}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:10;background:rgba(13,27,62,.95);border-bottom:1px solid rgba(201,168,76,.15)}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 1rem;height:3.5rem;display:flex;align-items:center;gap:1rem}
+.logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.5rem;margin-right:auto}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
+.knop{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none;padding:.45rem .9rem;border-radius:7px}
+.knop.actief{background:var(--accent);color:var(--navy)}
+.band{background:var(--accent);padding:1.6rem 1rem;text-align:center}
+.band h1{margin:0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-.02em;color:var(--navy)}
+.band h1 span{color:#fff}
+.intro{background:#fff;text-align:center;padding:1.8rem 1rem;color:var(--tekst);line-height:1.7}
+.intro p{max-width:720px;margin:0 auto}
+main{background:var(--bg);padding:2.5rem 1rem 4rem;min-height:50vh}
+.inner{max-width:1100px;margin:0 auto}
+.kaarten{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+.kaart{display:block;background:#fff;border-radius:var(--radius);padding:1.6rem 1.8rem;text-decoration:none;box-shadow:0 2px 8px rgba(13,27,62,.07);border-top:4px solid var(--accent);transition:transform .15s}
+.kaart:hover{transform:translateY(-3px)}
+.kaart .label{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dim)}
+.kaart h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.3rem;color:var(--navy);margin:.4rem 0 .5rem}
+.kaart p{margin:0;color:var(--tekst-zacht);line-height:1.5}
+.video{background:#fff;border-radius:var(--radius);padding:1rem;box-shadow:0 2px 8px rgba(13,27,62,.07)}
+video{width:100%;display:block;border-radius:8px;background:#000}
+.terug{display:inline-block;margin-bottom:1.2rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:var(--navy);text-decoration:none}
