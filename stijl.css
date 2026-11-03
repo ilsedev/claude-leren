@@ -57,3 +57,11 @@ video{width:100%;display:block;border-radius:8px;background:#000}
 .dagnav .volgende{justify-self:end;text-align:right}
 .dagnav .vorige{justify-self:start}
 @media(max-width:560px){.dagnav{grid-template-columns:1fr 1fr}.dagnav .overzicht{grid-column:1/-1;grid-row:2;text-align:center}.dagpagina{padding:1.4rem 1.2rem}}
+.kaart.beeld .plaatje{position:relative;overflow:hidden}
+.kaart.beeld .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(13,27,62,.88);box-shadow:0 4px 14px rgba(13,27,62,.35);transition:transform .15s}
+.kaart.beeld .play::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent var(--accent)}
+.kaart.beeld:hover .play{transform:scale(1.1)}
+.video{position:relative}
+.grote-play{position:absolute;left:50%;top:50%;width:110px;height:110px;margin:-55px 0 0 -55px;border:0;border-radius:50%;background:rgba(13,27,62,.9);cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.grote-play::after{content:"";position:absolute;left:44px;top:33px;border-style:solid;border-width:22px 0 22px 34px;border-color:transparent transparent transparent var(--accent)}
+.grote-play[hidden]{display:none}
