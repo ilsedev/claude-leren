@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../stijl.css?v=4">
+<title>Dag 6: /goal · Cheat sheet</title>
+</head>
+<body>
+<nav><div class="nav-in"><a class="logo" href="https://promptstad.nl"><span class="dot"></span>Promptstad</a><a class="knop" href="../../">Claude leren</a><a class="knop actief" href="../../cheat-sheet/">Cheat sheet</a></div></nav>
+<div class="band"><h1><span>Dag 6:</span> /goal</h1></div>
+<div class="intro"><p>Geef een doel met een duidelijk eindpunt. Claude werkt door tot het gehaald is.</p></div>
+<main><div class="inner smal"><a class="terug" href="../">← Cheat sheet</a>
+<article class="dagpagina">
+<h2>Wat het doet</h2>
+<p>Met <code>/goal</code> geef je een eindvoorwaarde. Na elke beurt kijkt een klein, snel model of die voorwaarde gehaald is. Zo niet, dan gaat Claude zelf door, zonder dat jij steeds een nieuwe prompt hoeft te geven. Het doel stopt als het gehaald is, als het onmogelijk blijkt, of als jij <code>/goal clear</code> typt.</p>
+<h2>Wanneer gebruik je het</h2>
+<ul><li>Een klus met een duidelijk, controleerbaar eindpunt.</li><li>Werk dat uit veel kleine stappen bestaat, zoals alle fouten in een lijst wegwerken.</li><li>Je wilt even weg terwijl Claude doorwerkt (het beste in combinatie met Auto-modus).</li></ul>
+<h2>Zo oefen je</h2>
+<ol><li>Bedenk één meetbaar eindpunt en hoe Claude kan laten zien dat het gehaald is.</li><li>Zet erbij wat niet mag veranderen, en een grens zoals ‘of stop na 20 beurten’.</li><li>Typ <code>/goal</code> met die voorwaarde. Claude begint meteen.</li><li>Typ tussendoor <code>/goal</code> zonder tekst om de stand te zien: tijd, beurten, tokens en de laatste reden.</li></ol>
+<h2>Voorbeeld</h2>
+<pre class="voorbeeld">/goal alle links op mijn pagina werken en dat is getest, zonder de teksten te veranderen, of stop na 20 beurten</pre>
+<div class="tip"><b>Let op</b>De controleur leest alleen het gesprek; hij opent zelf geen bestanden. Schrijf de voorwaarde dus zo dat Claude het bewijs in het gesprek kan laten zien, zoals een testuitslag of een lijst met gecontroleerde links.</div>
+</article>
+<nav class="dagnav"><a class="vorige" href="../dag-5/">← Dag 5: <code>/deep-research</code></a><a class="overzicht" href="../">Overzicht</a><a class="volgende" href="../dag-7/">Dag 7: <code>/effort</code> →</a></nav>
+</div></main>
+</body>
+</html>

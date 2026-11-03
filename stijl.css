@@ -37,3 +37,23 @@ video{width:100%;display:block;border-radius:8px;background:#000}
 .cmd .probeer{background:var(--bg-2);border-radius:7px;padding:.6rem .8rem;font-size:.95rem;color:var(--tekst)}
 .cmd .probeer b{color:var(--accent-dim)}
 @media print{nav,.band,.terug{display:none}main{background:#fff;padding:0}.cmd{box-shadow:none;border:1px solid #ccc;break-inside:avoid}}
+.cmd.link{display:block;text-decoration:none;color:inherit;transition:transform .15s}
+.cmd.link:hover{transform:translateY(-3px)}
+.cmd .meer{margin-top:.7rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.85rem;color:var(--accent-dim)}
+.inner.smal{max-width:760px}
+.dagpagina{background:#fff;border-radius:var(--radius);padding:1.8rem 2rem;box-shadow:0 2px 8px rgba(13,27,62,.07);border-top:4px solid var(--accent);line-height:1.65}
+.dagpagina h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;color:var(--navy);margin:1.6rem 0 .5rem}
+.dagpagina h2:first-child{margin-top:0}
+.dagpagina p{margin:0}
+.dagpagina ul,.dagpagina ol{margin:0;padding-left:1.4rem}
+.dagpagina li{margin:.3rem 0}
+.dagpagina code,.dagnav code{font-family:'JetBrains Mono',monospace;font-size:.92em;background:var(--bg-2);padding:.05rem .35rem;border-radius:4px;color:var(--navy)}
+.voorbeeld{margin:0;background:var(--navy);color:#fff;font-family:'JetBrains Mono',monospace;font-size:.95rem;padding:1rem 1.2rem;border-radius:8px;white-space:pre-wrap;word-break:break-word}
+.tip{margin-top:1.6rem;background:var(--bg-2);border-left:5px solid var(--accent);border-radius:7px;padding:.9rem 1.1rem}
+.tip b{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:var(--accent-dim);margin-bottom:.2rem}
+.dagnav{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;margin-top:1.5rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800}
+.dagnav a{color:var(--navy);text-decoration:none;background:#fff;border-radius:8px;padding:.6rem .9rem;box-shadow:0 2px 8px rgba(13,27,62,.07)}
+.dagnav a:hover{background:var(--accent)}
+.dagnav .volgende{justify-self:end;text-align:right}
+.dagnav .vorige{justify-self:start}
+@media(max-width:560px){.dagnav{grid-template-columns:1fr 1fr}.dagnav .overzicht{grid-column:1/-1;grid-row:2;text-align:center}.dagpagina{padding:1.4rem 1.2rem}}
