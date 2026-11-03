@@ -1,9 +1,9 @@
 /* Huisstijl van promptstad.nl */
-:root{--navy:#0D1B3E;--accent:#C9A84C;--accent-dim:#8B6B20;--wit:#fff;--bg:#c5c5e6;--bg-2:#ECECF4;--tekst:#1A2340;--tekst-zacht:#5C6480;--radius:12px}
+:root{--navy:#0D1B3E;--accent:#7A6FD6;--accent-dim:#4E43A0;--wit:#fff;--bg:#c5c5e6;--bg-2:#ECECF4;--tekst:#1A2340;--tekst-zacht:#5C6480;--radius:12px}
 *{box-sizing:border-box}
 body{margin:0;font-family:'DM Sans',sans-serif;color:var(--tekst);background:var(--bg)}
 a{color:inherit}
-nav{position:sticky;top:0;z-index:10;background:rgba(13,27,62,.95);border-bottom:1px solid rgba(201,168,76,.15)}
+nav{position:sticky;top:0;z-index:10;background:rgba(13,27,62,.95);border-bottom:1px solid rgba(122,111,214,.25)}
 .nav-in{max-width:1100px;margin:0 auto;padding:0 1rem;height:3.5rem;display:flex;align-items:center;gap:1rem}
 .logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.5rem;margin-right:auto}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
@@ -59,9 +59,9 @@ video{width:100%;display:block;border-radius:8px;background:#000}
 @media(max-width:560px){.dagnav{grid-template-columns:1fr 1fr}.dagnav .overzicht{grid-column:1/-1;grid-row:2;text-align:center}.dagpagina{padding:1.4rem 1.2rem}}
 .kaart.beeld .plaatje{position:relative;overflow:hidden}
 .kaart.beeld .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(13,27,62,.88);box-shadow:0 4px 14px rgba(13,27,62,.35);transition:transform .15s}
-.kaart.beeld .play::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent var(--accent)}
+.kaart.beeld .play::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent #fff}
 .kaart.beeld:hover .play{transform:scale(1.1)}
 .video{position:relative}
 .grote-play{position:absolute;left:50%;top:50%;width:110px;height:110px;margin:-55px 0 0 -55px;border:0;border-radius:50%;background:rgba(13,27,62,.9);cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.4)}
-.grote-play::after{content:"";position:absolute;left:44px;top:33px;border-style:solid;border-width:22px 0 22px 34px;border-color:transparent transparent transparent var(--accent)}
+.grote-play::after{content:"";position:absolute;left:44px;top:33px;border-style:solid;border-width:22px 0 22px 34px;border-color:transparent transparent transparent #fff}
 .grote-play[hidden]{display:none}
