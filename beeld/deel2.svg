@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13265A"/><stop offset="1" stop-color="#0D1B3E"/></linearGradient><radialGradient id="r" cx=".8" cy=".2" r=".6"><stop offset="0" stop-color="#C9A84C" stop-opacity=".35"/><stop offset="1" stop-color="#C9A84C" stop-opacity="0"/></radialGradient></defs><rect width="600" height="340" fill="url(#g)"/><rect width="600" height="340" fill="url(#r)"/>
+<g transform="translate(300 175)">
+<rect x="-110" y="-70" width="220" height="140" rx="22" fill="#1A2340" stroke="#fff" stroke-opacity=".25" stroke-width="3"/>
+<text x="0" y="12" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="34" fill="#fff" text-anchor="middle">Claude</text>
+<g fill="#C9A84C"><rect x="-200" y="-110" width="96" height="58" rx="14"/><rect x="104" y="-110" width="96" height="58" rx="14"/><rect x="-200" y="52" width="96" height="58" rx="14"/><rect x="104" y="52" width="96" height="58" rx="14"/></g>
+<g font-family="DM Sans,sans-serif" font-weight="700" font-size="20" fill="#0D1B3E" text-anchor="middle"><text x="-152" y="-74">skill</text><text x="152" y="-74">hook</text><text x="-152" y="88">mod</text><text x="152" y="88">plugin</text></g>
+<g stroke="#C9A84C" stroke-width="3" stroke-dasharray="6 6"><path d="M-104 -60 L-80 -45"/><path d="M104 -60 L80 -45"/><path d="M-104 60 L-80 45"/><path d="M104 60 L80 45"/></g></g>
+</svg>

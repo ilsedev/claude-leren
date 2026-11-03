@@ -25,3 +25,15 @@ main{background:var(--bg);padding:2.5rem 1rem 4rem;min-height:50vh}
 .video{background:#fff;border-radius:var(--radius);padding:1rem;box-shadow:0 2px 8px rgba(13,27,62,.07)}
 video{width:100%;display:block;border-radius:8px;background:#000}
 .terug{display:inline-block;margin-bottom:1.2rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:var(--navy);text-decoration:none}
+.kaart.beeld{padding:0;overflow:hidden}
+.kaart.beeld img{display:block;width:100%;aspect-ratio:600/340;object-fit:cover;transition:transform .3s}
+.kaart.beeld:hover img{transform:scale(1.04)}
+.kaart.beeld .tekst{padding:1.2rem 1.5rem 1.5rem}
+.kaart.spiek{border-top-color:var(--navy)}
+.cmd{background:#fff;border-radius:var(--radius);padding:1.4rem 1.6rem;box-shadow:0 2px 8px rgba(13,27,62,.07);border-left:5px solid var(--accent)}
+.cmd .dag{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dim)}
+.cmd code{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:1.35rem;font-weight:500;color:var(--navy);margin:.3rem 0 .4rem}
+.cmd p{margin:0 0 .6rem;line-height:1.5}
+.cmd .probeer{background:var(--bg-2);border-radius:7px;padding:.6rem .8rem;font-size:.95rem;color:var(--tekst)}
+.cmd .probeer b{color:var(--accent-dim)}
+@media print{nav,.band,.terug{display:none}main{background:#fff;padding:0}.cmd{box-shadow:none;border:1px solid #ccc;break-inside:avoid}}

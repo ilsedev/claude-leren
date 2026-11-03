@@ -4,23 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="stijl.css">
 <title>Claude leren</title>
 </head>
 <body>
-<nav><div class="nav-in"><a class="logo" href="https://promptstad.nl"><span class="dot"></span>Promptstad</a><a class="knop actief" href="./">Claude leren</a></div></nav>
+<nav><div class="nav-in"><a class="logo" href="https://promptstad.nl"><span class="dot"></span>Promptstad</a><a class="knop actief" href="./">Claude leren</a><a class="knop" href="spiekbriefje/">Spiekbriefje</a></div></nav>
 <div class="band"><h1><span>Claude leren:</span> kijken en onthouden</h1></div>
-<div class="intro"><p>Korte filmpjes als geheugensteun voor Claude Code. Eerst het idee, dan zie je het in Claude gebeuren.</p></div>
-<main><div class="inner"><div class="kaarten" id="lijst"><p>Nog geen filmpjes.</p></div></div></main>
+<div class="intro"><p>Korte filmpjes over Claude Code. Eerst het idee, dan zie je het in Claude gebeuren.</p></div>
+<main><div class="inner"><div class="kaarten" id="lijst"></div></div></main>
 <script>
+const spiek='<a class="kaart beeld spiek" href="spiekbriefje/"><img src="beeld/spiekbriefje.svg" alt=""><div class="tekst"><div class="label">Spiekbriefje</div><h2>Tien slashcommando\'s</h2><p>De handigste commando\'s op een rij. Oefen er elke dag één.</p></div></a>';
+const lijst=document.getElementById('lijst');
+lijst.innerHTML=spiek;
 fetch('filmpjes.json',{cache:'no-store'}).then(r=>r.json()).then(f=>{
-  if(!f.length) return;
-  f.sort((a,b)=>a.slug.localeCompare(b.slug));
-  document.getElementById('lijst').innerHTML=f.map(x=>{
+  const nr=x=>parseInt((x.titel.match(/Deel (\d+)/)||[0,99])[1]);
+  f.sort((a,b)=>nr(a)-nr(b));
+  lijst.innerHTML=f.map(x=>{
     const [deel,...rest]=x.titel.split(' · ');
-    return `<a class="kaart" href="${x.slug}/"><div class="label">${rest.length?deel:x.datum}</div><h2>${rest.length?rest.join(' · '):x.titel}</h2><p>${x.omschrijving||''}</p></a>`;
-  }).join('');
+    const n=nr(x), img=n<99?'<img src="beeld/deel'+n+'.svg" alt="">':'';
+    return '<a class="kaart beeld" href="'+x.slug+'/">'+img+'<div class="tekst"><div class="label">'+(rest.length?deel:x.datum)+'</div><h2>'+(rest.length?rest.join(' · '):x.titel)+'</h2><p>'+(x.omschrijving||'')+'</p></div></a>';
+  }).join('')+spiek;
 });
 </script>
 </body>
