@@ -5,7 +5,10 @@ body{margin:0;font-family:'DM Sans',sans-serif;color:var(--tekst);background:var
 a{color:inherit}
 nav{position:sticky;top:0;z-index:10;background:rgba(13,27,62,.95);border-bottom:1px solid rgba(122,111,214,.25)}
 .nav-in{max-width:1100px;margin:0 auto;padding:0 1rem;height:3.5rem;display:flex;align-items:center;gap:1rem}
-.nav-in .knop:first-child{margin-left:auto}
+.nav-in{gap:.4rem}
+.home-logo{display:flex;align-items:center;margin-right:.6rem;border-radius:8px;transition:transform .15s}
+.home-logo:hover{transform:scale(1.08)}
+.home-logo:focus-visible,.knop:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .knop .slash{font-family:"JetBrains Mono",monospace;font-size:1.05em;margin-right:.15em}
 .logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.5rem;margin-right:auto}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
