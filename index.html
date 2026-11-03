@@ -14,7 +14,7 @@
 <h1>Claude leren</h1>
 <ul id="lijst"><li>Nog geen filmpjes.</li></ul>
 <script>
-fetch('filmpjes.json').then(r=>r.json()).then(f=>{
+fetch('filmpjes.json',{cache:'no-store'}).then(r=>r.json()).then(f=>{
   if(!f.length) return;
   f.sort((a,b)=>b.datum.localeCompare(a.datum));
   document.getElementById('lijst').innerHTML=f.map(x=>
