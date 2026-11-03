@@ -22,6 +22,8 @@ nav{position:sticky;top:0;z-index:10;background:rgba(13,27,62,.95);border-bottom
 .band h1 span{color:#fff}
 .intro{background:#fff;text-align:center;padding:1.8rem 1rem;color:var(--tekst);line-height:1.7}
 .intro p{max-width:720px;margin:0 auto}
+.intro p+p{margin-top:.8rem}
+.intro a{color:var(--accent-dim);font-weight:500}
 main{background:var(--bg);padding:2.5rem 1rem 4rem;min-height:50vh}
 .inner{max-width:1100px;margin:0 auto}
 .kaarten{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
