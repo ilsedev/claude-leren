@@ -63,7 +63,7 @@ video{width:100%;display:block;border-radius:8px;background:#000}
 .dagnav .vorige{justify-self:start}
 @media(max-width:560px){.dagnav{grid-template-columns:1fr 1fr}.dagnav .overzicht{grid-column:1/-1;grid-row:2;text-align:center}.dagpagina{padding:1.4rem 1.2rem}}
 .kaart.beeld .plaatje{position:relative;overflow:hidden}
-.kaart.beeld .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 4px 18px rgba(13,27,62,.55);transition:transform .15s}
+.kaart.beeld .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(122,111,214,.55);border:3px solid #fff;box-shadow:0 4px 18px rgba(13,27,62,.55);transition:transform .15s}
 .kaart.beeld .play::after{content:"";position:absolute;left:23px;top:17px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent #fff}
 .kaart.beeld:hover .play{transform:scale(1.1)}
 .video{position:relative}
