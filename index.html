@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="stijl.css?v=15">
+<link rel="stylesheet" href="stijl.css?v=16">
 <title>Claude leren</title>
 </head>
 <body>
@@ -25,6 +25,12 @@ fetch('filmpjes.json',{cache:'no-store'}).then(r=>r.json()).then(f=>{
     const n=nr(x), img=n<99?'<div class="plaatje"><img src="beeld/deel'+n+'.svg?v=2" alt=""><span class="play" aria-hidden="true"></span></div>':'';
     return '<a class="kaart beeld" href="'+x.slug+'/">'+img+'<div class="tekst"><div class="label">'+(rest.length?deel:x.datum)+'</div><h2>'+(rest.length?rest.join(' · '):x.titel)+'</h2><p>'+(x.omschrijving||'')+'</p></div></a>';
   }).join('')+spiek;
+  // Duur van elk filmpje uit de video zelf halen, afgerond op halve minuten.
+  document.querySelectorAll('.duur[data-video]').forEach(el=>{
+    const v=document.createElement('video'); v.preload='metadata'; v.muted=true;
+    v.onloadedmetadata=()=>{ const m=Math.max(.5,Math.round(v.duration/30)/2); el.textContent=(m===1?'1 minuut':String(m).replace('.',',')+' minuten'); v.removeAttribute('src'); v.load(); };
+    v.src=el.dataset.video;
+  });
 });
 </script>
 </body>
