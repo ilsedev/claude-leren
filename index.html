@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude leren</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 16px;color:#222;background:#fff}
+  h1{font-size:1.6rem} li{margin:0 0 1rem} a{color:#0a58ca;font-weight:600}
+  small{color:#666;display:block}
+</style>
+</head>
+<body>
+<h1>Claude leren</h1>
+<ul id="lijst"><li>Nog geen filmpjes.</li></ul>
+<script>
+fetch('filmpjes.json').then(r=>r.json()).then(f=>{
+  if(!f.length) return;
+  f.sort((a,b)=>b.datum.localeCompare(a.datum));
+  document.getElementById('lijst').innerHTML=f.map(x=>
+    `<li><a href="${x.slug}/">${x.titel}</a><small>${x.datum} · ${x.omschrijving||''}</small></li>`).join('');
+});
+</script>
+</body>
+</html>
