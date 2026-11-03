@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="stijl.css?v=16">
+<link rel="stylesheet" href="stijl.css?v=17">
 <title>Claude leren</title>
 </head>
 <body>
@@ -13,6 +13,7 @@
 <div class="band"><h1><span>Claude leren:</span> kijken en onthouden</h1></div>
 <div class="intro"><p>Claude Leren is mijn oefenplek voor werken met Claude Code. Ik leer van podcasts en (Engelstalige) YouTube-filmpjes. Wat ik daaruit wil oefenen en onthouden, zet ik hier in korte filmpjes en een cheat sheet. Filmpje 0 is een introductie; daarna volgen mijn leerpunten van begin november 2026. Misschien vul ik het later aan, misschien ook niet: vaak heb ik meer plannen dan tijd, of gewoon geen zin in een vervolg 😊. De officiële uitleg vind je op <a href="https://academy.claude.com" target="_blank" rel="noopener">Claude Academy</a>.</p></div>
 <main id="filmpjes"><div class="inner"><div class="kaarten" id="lijst" style="scroll-margin-top:5rem"></div></div></main>
+<footer class="voet"><a href="sitemap/">Sitemap</a></footer>
 <script>
 const spiek='<a class="kaart beeld spiek" href="cheat-sheet/"><img src="beeld/spiekbriefje.svg?v=2" alt=""><div class="tekst"><div class="label">Cheat sheet</div><h2>Tien slashcommando\'s</h2><p>Tien handige commando\'s, elk met een eigen oefening. Oefen er elke dag één.</p></div></a>';
 const lijst=document.getElementById('lijst');
@@ -23,7 +24,7 @@ fetch('filmpjes.json',{cache:'no-store'}).then(r=>r.json()).then(f=>{
   lijst.innerHTML=f.map(x=>{
     const [deel,...rest]=x.titel.split(' · ');
     const n=nr(x), img=n<99?'<div class="plaatje"><img src="beeld/deel'+n+'.svg?v=2" alt=""><span class="play" aria-hidden="true"></span></div>':'';
-    return '<a class="kaart beeld" href="'+x.slug+'/">'+img+'<div class="tekst"><div class="label">'+(rest.length?deel:x.datum)+'</div><h2>'+(rest.length?rest.join(' · '):x.titel)+'</h2><p>'+(x.omschrijving||'')+'</p></div></a>';
+    return '<a class="kaart beeld" href="'+x.slug+'/">'+img+'<div class="tekst"><div class="label">'+(rest.length?deel:x.datum)+'<span class="duur" data-video="'+x.slug+'/filmpje.mp4"></span></div><h2>'+(rest.length?rest.join(' · '):x.titel)+'</h2><p>'+(x.omschrijving||'')+'</p></div></a>';
   }).join('')+spiek;
   // Duur van elk filmpje uit de video zelf halen, afgerond op halve minuten.
   document.querySelectorAll('.duur[data-video]').forEach(el=>{

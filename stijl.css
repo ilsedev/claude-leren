@@ -84,3 +84,7 @@ video{width:100%;display:block;border-radius:8px;background:#000}
 .vp-stop{background:rgba(255,255,255,.15);color:#fff}
 .kaart .duur{font-family:'DM Sans',sans-serif;font-style:italic;font-weight:400;font-size:.85rem;letter-spacing:0;text-transform:none;color:var(--tekst-zacht);margin-left:.6rem}
 .kaart .duur:empty{display:none}
+.voet{text-align:center;padding:1.2rem 1rem 1.6rem;background:var(--bg);font-size:.85rem}
+.voet a{color:var(--tekst-zacht);text-decoration:none}
+.voet a:hover{color:var(--navy);text-decoration:underline}
+.sitemap a{color:var(--navy)}
