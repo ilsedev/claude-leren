@@ -1,7 +1,7 @@
 /* Huisstijl van promptstad.nl */
 :root{--navy:#0D1B3E;--accent:#C9A84C;--accent-dim:#8B6B20;--wit:#fff;--bg:#c5c5e6;--bg-2:#ECECF4;--tekst:#1A2340;--tekst-zacht:#5C6480;--radius:12px}
 *{box-sizing:border-box}
-body{margin:0;font-family:'DM Sans',sans-serif;color:var(--tekst);background:var(--bg-2)}
+body{margin:0;font-family:'DM Sans',sans-serif;color:var(--tekst);background:var(--bg)}
 a{color:inherit}
 nav{position:sticky;top:0;z-index:10;background:rgba(13,27,62,.95);border-bottom:1px solid rgba(201,168,76,.15)}
 .nav-in{max-width:1100px;margin:0 auto;padding:0 1rem;height:3.5rem;display:flex;align-items:center;gap:1rem}
