@@ -1,6 +1,8 @@
 # Cheapest reliable DAB+ receiver hardware for a headless MCU-controlled radio (NL buyer, state Nov 2026)
 
-**Read this first (method limits).** The session's network blocked almost every shop, distributor and manufacturer domain (digikey.nl, lcsc.com, monkeyboard.org, dabshield.com, fmdx.org, cnx-software.com, elektormagazine.com, worlddab.org, james.cridland.net all failed to resolve). Only github.com could be fetched directly. Everything else below comes from search-result snippets, which can be stale or truncated. AliExpress, Amazon.nl, bol.com, Action, Lidl, Kruidvat, Tweakers Pricewatch and Mouser returned no usable price data at all. Prices marked "snippet" were not confirmed on the live page. Items marked **[UNVERIFIED RECOLLECTION]** come from the researcher's background knowledge, have no source found in this session, and must be checked before being used in a report.
+**Priority note:** the maker now prefers the retail-radio route with about 20 identical units; section 3 is therefore the main section and contains the ranked shortlist.
+
+**Read this first (method limits).** The session's network blocked almost every shop, distributor and manufacturer domain (digikey.nl, lcsc.com, monkeyboard.org, dabshield.com, fmdx.org, cnx-software.com, elektormagazine.com, worlddab.org, james.cridland.net all failed to resolve; later also technisat.de, teltarif.de, amazon.de, asset.conrad.com, radiomuseum.org, rundfunkforum.de, forum.digitalfernsehen.de, manualslib.com). Only github.com could be fetched directly. Everything else below comes from search-result snippets, which can be stale or truncated. AliExpress, Amazon.nl, bol.com, Action, Lidl, Kruidvat, Tweakers Pricewatch and Mouser returned no usable price data at all. Prices marked "snippet" were not confirmed on the live page. Items marked **[UNVERIFIED RECOLLECTION]** come from the researcher's background knowledge, have no source found in this session, and must be checked before being used in a report.
 
 ---
 
@@ -85,31 +87,149 @@ No bare "DAB+ receiver module board" with a documented UART/I2C interface was fo
 
 ---
 
-## 3. Cheapest complete retail DAB+ radios in NL/DE to gut for their receiver board
+## 3. PRIORITY ROUTE: a cheap complete retail DAB+ radio as the base, about 20 identical units
+
+*(Expanded after the coordinator's priority update. The maker now prefers this route; the other sections are kept for comparison.)*
 
 ### Takeaway
-The cheapest retail DAB+ radios surfaced were about EUR 27-37 (Sangean at MediaMarkt BE EUR 26.99, TechniSat TechniRadio RDR EUR 30.64 at Proshop.nl, Denver DAB-57 EUR 34.71, generic Denver from about EUR 36 on bol.com); nothing under EUR 25 and nothing from Action, Lidl or Kruidvat was found. No source documented power-loss behaviour, numbered preset buttons or line-out for these models.
+The best-documented candidates are two near-identical TechniSat pocket radios: the **TechniRadio RDR** (about EUR 31-35 in NL shops) and the **AQINOVA Digital 1** (EUR 23-25 regular in DE, promotions reported at EUR 13 plus shipping). Both have four direct preset keys, 5 V USB power, a 3.5 mm headphone output and a 1 W mono speaker amp; the RDR additionally has a mechanical ON/OFF slide switch and a forum report says it simply plays when 5 V is applied, even with the battery removed. Twenty units therefore cost roughly EUR 260-500 (Aqinova) or EUR 610-700 (RDR). No teardown, chipset, speaker impedance or confirmed "resumes last station after power loss" statement was found for any candidate, so buying one sample and testing it is mandatory before ordering twenty.
 
 ### Cited Findings
-- TechniSat TechniRadio RDR (portable DAB/DAB+/FM, mono): EUR 30.64 incl. VAT (EUR 25.32 excl.) at Proshop.nl (snippet) — [Proshop.nl](https://www.proshop.nl/DAB-Wekkerradio/TechniSat-TechniRadio-RDR-DAB-portable-radio-DABDABFM-Mono/2804080)
-- A Sangean DAB+ radio is listed at EUR 26.99 at MediaMarkt Belgium (model not identified in snippet) — [MediaMarkt BE](https://www.mediamarkt.be/nl/v/radio-fm-sangean)
-- Denver DAB-57 clock radio (40 station presets): EUR 34.71 at MediaMarkt BE (snippet) — [MediaMarkt BE](https://www.mediamarkt.be/nl/product/_denver-dab57-dab-radio-zwart-147488420.html)
-- Denver DAB-18: 20 presets (10 DAB+, 10 FM); price not in snippet — [MediaMarkt NL](https://www.mediamarkt.nl/en/product/_dab18-137642040.html)
-- A consumer comparison site names a Denver as "best cheap DAB+ radio", with bol.com prices between EUR 36 and EUR 59.99 on the same page — [debeterewereld.nl](https://www.debeterewereld.nl/wonen-leven/dab-radio/)
-- Another names the Denver DAB-46 (mains and battery) as its cheapest pick; no price given — [volgensconsument.nl](https://www.volgensconsument.nl/beste-dab-plu-radio/)
-- Netzwelt's 2026 DAB+ test names the Medion DRE-1 as its price tip at about EUR 40 — [netzwelt.de](https://www.netzwelt.de/vergleich/dab-plus-radio-test-2026-besten-modelle-100-euro-preis-leistungs-sieger.html)
-- A DAB+ clock radio is shown at EUR 34.99 on MediaMarkt BE's DAB category page — [MediaMarkt BE](https://www.mediamarkt.be/nl/category/dab-radio-0056.html?page=6)
-- A senior-oriented retail model exists: Kenwood CR-M70DAB-W "DAB+ radio voor senioren" at BCC (price not in snippet) — [BCC](https://www.bcc.nl/product/kenwood-cr-m70dab-w-dab-radio-voor-senioren-wit)
+
+**Candidate A: TechniSat TechniRadio RDR (art. 0000/3922, 0001/3922, 0002/3922 = colour variants)**
+- Price NL: EUR 30.64 incl. VAT (EUR 25.32 excl.) at Proshop.nl plus EUR 4.99 cheapest shipping; from EUR 34.54 at Bol Plaza according to vergelijk.nl; also listed at MediaMarkt.nl (price not in snippet). Snippet prices, date not shown — [Proshop.nl](https://www.proshop.nl/DAB-Wekkerradio/TechniSat-TechniRadio-RDR-DAB-portable-radio-DABDABFM-Mono/2804080), [vergelijk.nl](https://www.vergelijk.nl/draagbare_radio/technisat/), [MediaMarkt.nl](https://www.mediamarkt.nl/nl/product/_technisat-rdr-radio-zilver-175082328.html)
+- Presets: keys "1...4" are direct favourite keys; a separate "P" key reaches a 20-slot favourite memory (20 DAB+ and 20 FM) — [TechniSat manual PDF](https://www.technisat.de/media/08/53/73/1700029986/BDA_TECHNIRADIO_RDR_D1000014711925.pdf), [Kaufland listing](https://www.kaufland.de/product/342348376/)
+- Power: DC 5 V, 500 mA via mini-USB "DC-IN"; internal Li-ion 3.7 V / 800 mAh, up to 6 hours; the manual says a standard 5 V USB supply is needed and not included (the TechniSat scope of delivery lists only a mini-USB cable and manual), while radiomuseum.org says a supply is included; a separate "incl. power supply" variant exists on technisat.de — [TechniSat manual PDF](https://www.technisat.de/media/08/53/73/1700029986/BDA_TECHNIRADIO_RDR_D1000014711925.pdf), [radiomuseum.org](https://radiomuseum.org/r/technisat_techniradio_rdr.html), [TechniSat "incl. power supply"](https://www.technisat.de/en/portable-radios/technisat-techniradio-rdr-incl.-power-supply-colour-red)
+- On/off: a slide switch with ON and OFF positions; the battery also charges in the OFF position. After the very first switch-on an automatic full DAB scan starts — [TechniSat manual PDF](https://www.technisat.de/media/08/53/73/1700029986/BDA_TECHNIRADIO_RDR_D1000014711925.pdf)
+- Volume: set with a "Lautstaerkeregler" (volume control); whether this is a rotary wheel or keys was not visible in the snippet — [TechniSat manual PDF](https://www.technisat.de/media/08/53/73/1700029986/BDA_TECHNIRADIO_RDR_D1000014711925.pdf)
+- Audio: mono speaker, system power 1 W RMS; one 3.5 mm headphone output; 3.5 mm AUX-in; USB port; LED torch — [TechniSat product page](https://www.technisat.de/en/TECHNIRADIO-RDR/0001-3922), [Kaufland listing](https://www.kaufland.de/product/342348376/)
+- Power-on behaviour (forum report, not manufacturer): in a Rundfunkforum thread about DAB radios that can be switched by a timer socket, the RDR is described as working "without battery", "just connect a power supply (mini-USB) and it runs"; whether settings survive without power was not settled in that thread — [Rundfunkforum thread](https://www.rundfunkforum.de/viewtopic.php?t=61873&start=15)
+- A larger sibling "TechniRadio RDR XL" exists (own manual) — [TechniSat RDR XL manual](https://www.technisat.de/media/c3/dd/c8/1741840879/BDA_TECHNIRADIO_RDR_XL_D1000017891661.pdf?ts=1762405575)
+- TechniSat has a service page for the RDR titled "current information / downloads / recalls" (content not retrieved) — [TechniSat service page](https://www.technisat.com/de_DE/Aktuelle-Informationen-Downloads-Rueckrufe/352-515/?article=0000/3922&productID=22184)
+
+**Candidate B: TechniSat AQINOVA Digital 1 (TechniSat budget brand)**
+- Price DE: EUR 22.99 (RRP EUR 29.00) at Otto and in the TechniSat shop; EUR 24.99 at Marktkauf; a price-comparison page shows "4 offers from EUR 13"; teltarif reported limited TechniSat promotions at EUR 13 plus EUR 5.95 shipping (EUR 18.95) and EUR 18.99 including shipping. Snippets, dates not all shown — [Otto](https://www.otto.de/p/technisat-aqinova-digital-1-digitalradio-dab-digitalradio-dab-fm-tuner-mit-rds-1-w-led-taschenlampe-wechselakku-direktwahltasten-kompakt-S02EG08F/?variationId=S02EG08FHOBL), [Marktkauf](https://www.marktkauf.de/technisat-aqinova-digital-1-kompaktes-dab-radio-mit-akku-usb/produkt-3038733000), [testsieger.de](https://www.testsieger.de/radios/7CPKCS5FP1FS5-technisat-aqinova-digital-1-dab-radio-mit-wechselbarem-akku-schwarz.html), [teltarif overview](https://www.teltarif.de/en/digitalradio-dabplus-schnaeppchen-radio/news/102810.html)
+- Features per Amazon.de title: LCD, favourite memory, direct dial buttons, headphone jack, USB, AUX-in, LED torch, changeable battery, 1 W — [Amazon.de](https://www.amazon.de/AQINOVA-Digital-Favoritenspeicher-Direktwahltasten-Kopfh%C3%B6reranschluss/dp/B096G3CQDX)
+- Four freely assignable direct station keys plus memory for 20 DAB+ and 20 FM stations; dimensions 12.7 x 5.8 x 2.3 cm (W x H x D), 124 g; Li-ion 3.7 V 800 mAh, runtime given as 10 h (a pre-release Aqinova page instead lists a BL-5C 1050 mAh battery; conflicting) — [TechniSat data sheet](https://www.technisat.de/datasheet?productId=22188&structureId=10003), [TechniSat manual PDF](https://www.technisat.de/media/ee/b9/a3/1700034195/BDA_Aqinova_Digital1_D1000014711926.pdf), [aqinova.de prelive](https://prelive.aqinova.de/Audio/)
+- Also sold on eBay and via allesfuerzuhause.de — [eBay](https://www.ebay.com/itm/177071766205), [allesfuerzuhause.de](https://allesfuerzuhause.de/product/technisat-aqinova-digital-1-5266210/)
+- No Dutch retailer listing was found for the Aqinova Digital 1 — [check24 comparison page (DE only)](https://preisvergleich.check24.de/ul/radios/7CPKCS5FP1FS5-technisat-aqinova-digital-1-dab-radio-mit-wechselbarem-akku-schwarz.html)
+
+**Other TechniSat bargains (model unconfirmed)**
+- teltarif reported on 30/31 March 2026 a TechniSat DAB+ pocket radio in TechniSat's own online shop for under EUR 9 (even less with newsletter sign-up), "still available"; the model name was not in the snippet and November 2026 status is unknown — [teltarif](https://www.teltarif.de/en/technisat-radio-dabplus-digitalradio-schnaeppchen/news/102701.html)
+- TechniSat publishes terms and conditions for business customers, i.e. a B2B sales channel exists — [TechniSat terms for enterprises](https://www.technisat.de/en/terms-and-conditions-for-enterprises)
+- An older report: TechniRadio 3 sold at Aldi for EUR 14.99 — [teltarif test](https://www.teltarif.de/techniradio-3-test/news/83028.html)
+
+**Candidate C: Caliber portables (Dutch brand with B2B/wholesale channel)**
+- Caliber HPG318DAB (portable DAB+ with alarm, built-in battery "up to 8 hours", USB, headphone connection, 10 presets): EUR 39.90 at MediaMarkt AT; EUR 39.99 at Coolblue NL but "temporarily sold out" — [MediaMarkt AT](https://www.mediamarkt.at/de/product/_caliber-hpg318dab-radio-fm-schwarz-94029769.html), [Coolblue NL](https://coolblue.nl/en/product/925091/caliber-hpg318dab.html), [Caliber B2B](https://b2b.calibereurope.com/en/?p=476531)
+- Caliber HPG335DAB (portable DAB+/FM with built-in battery): EUR 34.90 at MediaMarkt AT; also offered wholesale on Ankorstore — [MediaMarkt AT](https://www.mediamarkt.at/de/product/_caliber-hpg335dab-radio-mit-akku-dab-dab-schwarz-89448580.html), [Ankorstore](https://www.ankorstore.com/brand/caliber-europe-30009/tragbares-dab-fm-radio-mit-eingebautem-akku-hpg335dab-2962583)
+- Caliber HPG-317R: EUR 37.99 in stock at Coolblue DE, "never available again" at Coolblue BE (illustrates discontinuation risk) — [Coolblue DE](https://www.coolblue.de/en/product/925083/caliber-hpg-317r-silver.html), [Coolblue BE](https://www.coolblue.be/en/product/925083/caliber-hpg-317r-silver.html)
+- Caliber Europe runs a B2B web shop — [Caliber B2B](https://b2b.calibereurope.com/en/?p=477459)
+
+**Candidate D: Denver table radios**
+- Denver DAB-46: runs on mains or batteries (batteries not included), headphone output, telescopic antenna, alarm; output power 2 W RMS per Conrad data sheet (manual says max. 5 W); about 710 g, 103 mm high, 95 mm deep; price not in snippets — [Coolblue NL](https://coolblue.nl/en/product/861641/denver-dab-46-gray.html), [Conrad data sheet](https://asset.conrad.com/media10/add/160267/c1/-/en/001954044DS00/datasheet-1954044-denver-dab-46-desk-radio-dab-fm-grey.pdf), [Pricespy](https://pricespy.ie/product.php?p=5076456), [Tradeinn](https://www.tradeinn.com/techinn/en/denver-dab-46-radio/137858175/p)
+- Denver DAB-18: 20 presets (10 DAB+, 10 FM) — [MediaMarkt NL](https://www.mediamarkt.nl/en/product/_dab18-137642040.html)
+- Denver DAB-57 clock radio (40 presets): EUR 34.71 at MediaMarkt BE — [MediaMarkt BE](https://www.mediamarkt.be/nl/product/_denver-dab57-dab-radio-zwart-147488420.html)
+- A Denver is named cheapest/best-budget DAB+ radio by two Dutch comparison sites, with bol.com prices EUR 36 to EUR 59.99 — [debeterewereld.nl](https://www.debeterewereld.nl/wonen-leven/dab-radio/), [volgensconsument.nl](https://www.volgensconsument.nl/beste-dab-plu-radio/)
+
+**Other price points seen**
+- TechniSat TechniRadio 40 DAB+ clock radio: EUR 35.99 at Bol, named "cheapest DAB+ radio today" by a Dutch deal site — [aanbiedingjager.nl](https://aanbiedingjager.nl/dab-radio-aanbiedingen)
+- TechniSat Digitradio 2 (portable, battery, Bluetooth, headphone, 1 W): EUR 40.66 on a comparison site — [beslist.nl](https://www.beslist.nl/products/elektronica/elektronica_19875530_19943086/r/radio_met_voorkeurzenders/)
+- Sangean DAB+ radio EUR 26.99 at MediaMarkt BE (model unidentified); Medion DRE-1 about EUR 40 (netzwelt price tip) — [MediaMarkt BE](https://www.mediamarkt.be/nl/v/radio-fm-sangean), [netzwelt.de](https://www.netzwelt.de/vergleich/dab-plus-radio-test-2026-besten-modelle-100-euro-preis-leistungs-sieger.html)
+- teltarif's overview (about half a year old in Nov 2026) lists eight DAB+ radios under EUR 25, naming Caliber, Ocean Digital, Inscabin, Aqinova Digital 1 and "OK." (MediaMarkt/Saturn house brand); individual prices not retrieved — [teltarif](https://www.teltarif.de/en/digitalradio-dabplus-schnaeppchen-radio/news/102810.html)
+- eBay.de has used/refurbished DAB+ portables with headphone jack from about EUR 22 — [eBay.de category](https://www.ebay.de/b/Kopfhorerbuchse-DAB-AM-FM-tragbare-Radios/96954/bn_97253416)
+- AliExpress class: "DAB-PC1" unit, under GBP 20 shipped; inside an FCI FC8080Q DAB chipset, a BP1048B2 audio/Bluetooth chip and a CST8102A amplifier; reviewer calls it a decent little DAB+ radio (2026). "DAB-P9" pocket DAB+/FM radio from China reviewed favourably by Silicon Chip in July 2020 — [James Cridland](https://james.cridland.net/blog/2026/review-dabplus-radio/), [Silicon Chip](https://www.siliconchip.com.au/Issue/2020/July/Low-cost+pocket+DAB%2B+receiver.+Is+it+any+good%3F)
+
+**Radios reported to start by themselves when power returns**
+- Karcher DAB 2405: restarts by itself after a supply interruption (forum report) — [Rundfunkforum](https://www.rundfunkforum.de/viewtopic.php?t=61873&start=15)
+- Silvercrest (Lidl) SIRD 14 C2/C3 internet/DAB radios: described as "cold-start capable", playing the last station when power is re-applied (forum report); these cost EUR 99.99 at launch, so not a budget option — [Rundfunkforum](https://www.rundfunkforum.de/viewtopic.php?t=61873&start=15), [teltarif](https://www.teltarif.de/internetradio-streaming-multiroom-lidl/news/71101.html)
+- Further threads exist on exactly this requirement (radio that starts via a switched socket) — [Rundfunkforum t=56494](https://www.rundfunkforum.de/viewtopic.php?t=56494), [Rundfunkforum t=64408](https://www.rundfunkforum.de/viewtopic.php?p=1831667&t=64408), [hifi-forum](http://www.hifi-forum.de/viewthread-234-1816.html)
+- DAB+ radios with the new ASA function can wake from standby for emergency warnings; ASA-capable sets have been available since mid-2025 (unrelated to power-loss restart, but shows standby is the normal default state) — [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/digitale-welt/fernsehen/dabpflicht-das-gilt-fuer-radios-im-auto-und-zuhause-13387)
+
+**Controlling the radio's buttons from other switches or a microcontroller**
+- An optocoupler's output transistor can be wired across an existing push button without removing the button, with the MCU driving the opto LED through a series resistor; polarity of the opto transistor matters — [Arduino forum](https://forum.arduino.cc/t/noob-question-can-you-use-an-optocoupler-to-act-as-a-button-for-input-output/545640)
+- A transistor (collector-emitter) or, preferably, an N-channel MOSFET in parallel with an open switch lets an MCU pin operate it; this needs a shared ground and fails if the switch sits on the high side, in which case an optocoupler is recommended; relays also work but are poor at very low contact currents — [Hackaday](https://hackaday.com/2017/09/07/switching-from-relays-to-bipolar-junction-transistors)
+- On scanned keypads, shorting the two matrix pins mimics a key press; isolating with an optocoupler or relay is advised, but an optocoupler can be too slow for a scanned matrix — [ST Community](https://community.st.com/others-hardware-and-software-57/reverse-engineering-an-membrane-keypad-123624)
+- More threads on the same technique — [All About Circuits](https://forum.allaboutcircuits.com/threads/simulating-a-button-switch-press.152003/), [Arduino forum](https://forum.arduino.cc/t/can-an-arduino-be-used-to-replace-tactile-buttons/971156)
+
+**Precedents for DAB+ in valve radios**
+- teuler/Grundig60: open project converting a 1960s Grundig Typ 92 into a DAB radio (Make magazine 02/2017 community project); needed fixes for the capacitive station dial flipping between stations and for recalling the last station after power-on — [GitHub mirror](https://worker-github.zxx930427.workers.dev/teuler/Grundig60), [heise Make 2017/2](https://www.heise.de/select/make/2017/2/1492866958960984)
+- A commercial DAB+ retrofit kit for valve radios replaces the mixer valve; then only DAB+ or FM/AM works, no switching between them — [Radio-Bastler Forum](https://www.radio-bastler.de/forum/index.php?thread%2F12807-dab-mit-dem-r%C3%B6hrenradio-empfangen%2F=)
+- Further forum threads on retrofitting DAB+ to valve radios — [Dampfradioforum](https://www.dampfradioforum.de/viewtopic.php?f=5&t=25510&start=15), [SABA forum](http://saba-forum.dl2jas.com/index.php/Thread/7767-DAB-nachr%C3%BCsten-Eine-neue-Idee-f%C3%BCr-alte-Ger%C3%A4te/), [Radio-Bastler "Die DAB+Roehre"](https://radio-bastler.de/forum/showthread.php?tid=7761)
+
+### Candidate comparison (facts from the citations above; "?" = not found)
+
+| | TechniRadio RDR | AQINOVA Digital 1 | Caliber HPG318DAB / HPG335DAB | Denver DAB-46 |
+|---|---|---|---|---|
+| Price per unit | EUR 30.64 (Proshop.nl) to 34.54 (Bol Plaza) | EUR 22.99-24.99 regular; promos EUR 13 + 5.95 shipping | EUR 39.90 / 34.90 (MediaMarkt AT) | ? (Denver class from about EUR 36 on bol.com) |
+| 20 units (simple multiplication) | about EUR 613-691 | about EUR 460-500 regular; about EUR 260 if a EUR 13 promo is repeated | about EUR 700-800 | ? |
+| NL availability | Proshop.nl, Bol Plaza, MediaMarkt.nl | only DE sources found | Coolblue NL (sold out at snapshot), Caliber B2B, Ankorstore | Coolblue NL, MediaMarkt NL/BE |
+| Power input | 5 V 500 mA mini-USB; Li-ion 3.7 V 800 mAh | USB; replaceable Li-ion 3.7 V 800 mAh | built-in battery, USB | mains adapter or batteries (voltage ?) |
+| Headphone / line out | 3.5 mm headphone | 3.5 mm headphone | headphone (HPG318DAB) | headphone |
+| Preset keys | 4 direct keys + P key (20 slots) | 4 direct keys + 20/20 memory | 10 presets (direct keys ?) | ? |
+| Volume | "Lautstaerkeregler" (type ?) | ? | ? | ? |
+| On/off | mechanical ON/OFF slide switch | ? | ? | ? |
+| After power loss | forum: plays when 5 V applied, also without battery; settings retention unconfirmed | ? | ? | ? |
+| Size / weight | pocket (dimensions not retrieved) | 12.7 x 5.8 x 2.3 cm, 124 g | ? | 103 mm high, 95 mm deep, 710 g |
+| Speaker / amp | mono, 1 W RMS | 1 W | ? | 2 W RMS |
+| Antenna | ? (telescopic expected) | ? | ? | telescopic |
+| Chipset / teardown | none found | none found | none found | none found |
+
+### Ranked shortlist for a 20-unit purchase
+
+1. **TechniSat TechniRadio RDR.** Only candidate with (a) four direct preset keys, (b) a mechanical ON/OFF slide switch and (c) an independent report that it plays as soon as 5 V is applied, even without battery. Sold by at least three NL shops at EUR 31-35; a long-running model from a German brand with a B2B channel. About EUR 610-700 for 20.
+2. **TechniSat AQINOVA Digital 1.** Same feature class (four direct keys, 1 W, headphone, USB, 800 mAh) at EUR 23-25, with promotions down to EUR 13 plus shipping, so potentially half the cost of the RDR. Ranked second only because its on/off mechanism, battery-less operation and power-return behaviour are unverified and no NL seller was found (order from DE).
+3. **Caliber HPG335DAB / HPG318DAB** (EUR 35-40), mainly for its supply channel: Caliber is a Dutch brand with a B2B shop and Ankorstore wholesale listing, which suits a 20-piece order. Technical fit is unverified (direct preset keys, power behaviour). Alternative for position 3 if a mains-powered table set with a 2 W amp is preferred: Denver DAB-46 (price and presets unverified).
 
 ### Inferences
-- A gutted EUR 27-37 retail radio is price-competitive with every confirmed module (EUR 60-99) and brings antenna, PSU, amplifier and paid codec licences with it. Its drawback is control: the receiver is normally a single-board SoC radio driven by its own keypad/display, so an MCU can only "press buttons" (optocouplers/analog switches on the key matrix) without feedback.
-- For a 20-100 series this depends on one retail model staying available with unchanged internals, which budget brands (Denver, Medion, Lidl/Action house brands) do not guarantee.
-- Many cheap portables use tact-switch presets held in flash and resume the last station on power-up, but this is a general expectation, not a verified property of any model listed here; it must be tested per model.
+*(Engineering reasoning by the researcher; not taken from a source unless stated.)*
 
-### Gaps
-- Action, Lidl (Silvercrest), Kruidvat, Amazon.nl, bol.com listings and Tweakers Pricewatch/idealo minimum prices: no data retrieved. **[UNVERIFIED RECOLLECTION]** Lidl/Silvercrest and Amazon no-name DAB+ pocket radios have appeared at EUR 15-25 during promotions.
-- For every model: numbered preset buttons (count), headphone/line-out, behaviour after mains loss (returns to last station and on-state vs standby), internal chipset (Frontier Kino/Verona, Keystone, Si468x, Airoha, etc.): not found.
-- Prices are snippet values with unknown date; MediaMarkt snippets appeared to date from around July 2026.
+**Why the RDR/Aqinova type fits a valve-radio conversion**
+- 5 V USB power means any EUR 3-5 USB wall adapter or a small 5 V module inside the cabinet can supply it; no model-specific adapter is needed.
+- The RDR's slide switch is a mechanical state. If it is left at ON (or bridged), the radio should start whenever 5 V appears, which matches the forum report. The valve radio's own mains switch (or a relay/MOSFET on the 5 V rail driven by the original on/off key) then becomes the power control, and no "press the power button after a power cut" logic is needed. This is the single most valuable property for a seniors' radio and should be the first thing tested on a sample.
+- The Aqinova's identical battery, 1 W amp, four direct keys, torch, AUX and USB suggest it is a sibling design of the RDR, but that is an inference; it may use a soft power button instead of a slide switch.
+- If the battery is removed (advisable for an always-plugged unit in a wooden cabinet: no ageing Li-ion cell), behaviour on 5 V alone must be tested; the forum report says the RDR works that way.
+
+**Wiring the valve radio's keys to the preset buttons**
+- Simplest form: solder two wires across each of the four tactile preset switches and run them to contacts on the old key bank. This works directly only if the old contact is momentary.
+- Valve radios normally have latching, mutually interlocked piano keys (the pressed key stays down). A contact that stays closed looks like a long press to the radio, and on these radios a long press on a preset key usually means "store the current station here", which would overwrite presets. Latching keys therefore need edge-to-pulse conversion: either one RC differentiator plus transistor per key, or (cleaner) a small microcontroller (ATtiny, Arduino Nano, ESP32) that reads the four latching contacts, debounces, and on each change emits one short pulse (about 100-200 ms) on the matching preset line. The MCU can also re-send the pulse for the currently latched key a few seconds after power-up, so the radio always matches the key position even if it did not resume its last station.
+- Driving the preset switches from an MCU: first measure with a multimeter whether one side of each switch is ground (then an N-MOSFET such as 2N7000/BSS138, or an open-drain pin if the radio's logic voltage is at or below the MCU's, is enough when grounds are shared) or whether the keys form a scanned matrix or a resistor ladder on one ADC line (then use optocouplers, e.g. PC817, or an analogue switch such as CD4066/74HC4066 across the switch). The Hackaday and forum sources above support both methods and warn that optocouplers can be too slow for fast-scanned matrices.
+- Keep the wires short or route them away from the antenna: long unshielded leads on key lines can inject noise into a band-III receiver.
+- Preset count: both TechniSat models give four direct keys, which fits "3-6 presets" at the low end. More stations need either a model with more direct keys or MCU-emulated "P key plus up/down" sequences without feedback, which is fragile.
+
+**Volume**
+- If the radio's volume control is a rotary potentiometer or encoder wheel, the neat solution is to set the radio's own volume to a fixed level and place the valve radio's original volume pot (or a new log pot on the old shaft) between the headphone output and a separate small amplifier.
+- If volume is by push keys, the same fixed-level approach avoids having to emulate them.
+
+**Driving the old loudspeaker**
+- Option 1, speaker output: disconnect the radio's small speaker and connect the old one. A 1 W amplifier on a large, efficient valve-radio speaker gives usable room volume but little headroom. Impedance must be checked: the internal speaker is probably 4 or 8 ohm (unverified), valve-radio speakers are typically low-impedance (about 4-5 ohm) and sit behind an output transformer that must be disconnected; never feed the transformer primary. If the amplifier is bridge-tied (common in class-D pocket radios) neither speaker wire may be grounded.
+- Option 2, headphone output into a separate amplifier (for example a PAM8403/PAM8302-class 3 W class-D board at 5 V, or a TPA3110-class board at 12 V): more volume, allows the original volume pot, costs a few euros. Plugging into the headphone jack normally mutes the internal speaker; internally, the same signal can be tapped at the jack. A ground-loop/noise check is needed when radio and amplifier share one 5 V supply.
+- A stereo headphone output must be summed to mono (two resistors of about 1 kohm) for a single speaker; the RDR is a mono set, but its headphone output may still be stereo.
+
+**Antenna**
+- A pocket radio's telescopic antenna can be replaced by about 35-40 cm of wire (quarter wave at about 200 MHz) or a dipole inside the wooden cabinet; keep it away from the 5 V switching supply and the amplifier board. Metal chassis parts shield, so position matters; test in the real location.
+
+**Risks of the retail-radio route**
+- Discontinuation and silent revisions: budget models are replaced often (Coolblue BE already lists one Caliber model as "never available again"), and a model name can cover several PCB revisions or firmware versions. Buy all 20 at once from one seller, ideally from one production batch, plus two or three spares; open one unit first.
+- Firmware variants: key timing (short versus long press), start-up scan behaviour and menu language can differ between batches; the MCU pulse timing should be tolerant.
+- First-start scan: the RDR runs a full scan at first switch-on; if a unit loses its memory, it will rescan and presets may be gone. Whether presets live in non-volatile memory is unconfirmed.
+- Warranty: opening and modifying the radio ends any practical warranty claim; test each unit unmodified for a day or two before conversion so dead-on-arrival units can be returned (14-day distance-selling return right applies to consumer purchases in NL/DE).
+- Li-ion cell inside a closed wooden cabinet on permanent charge: remove it if the radio works without.
+- Quality: 1 W pocket radios have modest sensitivity and audio stages; reception inside a valve-radio cabinet and hum/noise with the chosen amplifier need a real test.
+- Legal position: reselling modified mains-connected equipment makes the maker responsible for its safety and conformity; for gifts or a hobby series this is a judgement call that was not researched here.
+
+### Gaps (what could not be verified)
+- **No teardown, chipset or PCB information** for the TechniRadio RDR, Aqinova Digital 1, any Caliber or any Denver model. Whether their preset keys are simple switches to ground, a scanned matrix or a resistor ladder is unknown until a unit is opened.
+- **Power-loss behaviour**: only one forum statement for the RDR ("connect power and it runs", battery-less); nothing for Aqinova, Caliber, Denver. Whether the RDR returns to the last station and keeps its four favourites with no battery and no supply is explicitly unconfirmed in the source thread.
+- **Aqinova Digital 1**: on/off mechanism (slide switch or soft key), volume control type, antenna, whether it runs without battery, current November 2026 price, and any NL seller.
+- **RDR**: exact dimensions and weight, volume control type (rotary or keys), speaker impedance, whether the headphone output is stereo, whether a key lock exists, whether the 1 W amplifier is bridge-tied.
+- **Speaker impedance and amplifier IC** of every candidate.
+- **Bulk/wholesale pricing** for 20 units: no quantity price found anywhere. TechniSat and Caliber both have B2B channels, but terms, minimums and prices were not retrieved. B-stock/refurbished offers: only a generic eBay.de category with used sets from about EUR 22.
+- **Action, Lidl, Kruidvat, Amazon.nl, bol.com, AliExpress, Tweakers Pricewatch, idealo**: no live prices could be retrieved (domains blocked, search snippets only). **[UNVERIFIED RECOLLECTION]** Lidl/Silvercrest and no-name Amazon DAB+ pocket radios appear at EUR 15-25 in promotions.
+- **The TechniSat "under EUR 9" pocket radio of March 2026**: model and current availability unknown; if it was the Aqinova Digital 1 or RDR, it would be the cheapest route by far.
+- **teltarif's list of eight sub-EUR-25 radios**: only five brand names retrieved, no model details.
+- **Caliber**: whether the 10 presets are direct keys; power behaviour; HPG335DAB specifications.
+- **Denver DAB-46**: price, adapter voltage, preset count and key type.
+- All prices are search-snippet values with unknown capture dates; the manuals on technisat.de (RDR: BDA_TECHNIRADIO_RDR_D1000014711925.pdf; Aqinova: BDA_Aqinova_Digital1_D1000014711926.pdf) could not be opened and should be read in full before purchase.
 
 ---
 
