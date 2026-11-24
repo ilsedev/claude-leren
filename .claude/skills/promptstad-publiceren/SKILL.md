@@ -1,0 +1,30 @@
+---
+name: promptstad-publiceren
+description: Een nieuw deel (filmpje met stem, artikel, oefeningen en nieuws) toevoegen aan claude-leren.promptstad.nl en live zetten via GitHub Pages. Gebruik bij "zet op PromptStad", "nieuw deel", "publiceer", of een nieuw filmpje voor Claude leren.
+---
+
+# Nieuw deel publiceren op claude-leren.promptstad.nl
+
+## Waar staat wat
+- Site: **claude-leren.promptstad.nl**, repo `ilsedev/claude-leren` (openbaar). GitHub Pages publiceert `main` automatisch (workflow "pages build and deployment", ongeveer 1 minuut). `CNAME` en `.nojekyll` staan in de root.
+- **Let op:** `ilsedev/promptstad-claude` is iets anders: een privé-repo met één HTML-bestand voor de Copilot-training. Die wordt niet gepubliceerd. Nieuwe Claude-lessen horen in `claude-leren`.
+- Opbouw: `index.html` (voorpagina, laadt `filmpjes.json`), per deel een map `JJJJ-MM-slug/` met `index.html` en `filmpje.mp4`, thumbnails in `beeld/deelN.svg`, `stijl.css` (huisstijl), `afspelen.js` (autoplay en volgende filmpje), `sitemap/`, `cheat-sheet/`.
+
+## Stappen
+1. **Inhoud**: schrijf het artikel in gewone, korte zinnen. Controleer beweringen over Claude in de officiële documentatie van Anthropic (code.claude.com/docs, platform.claude.com/docs) en noem bronnen. Ingesproken notities bewaren in de repo.
+2. **Dia's** (1920×1080): kopieer `hulpmiddelen/dias-voorbeeld-deel5.html` en vervang de inhoud. Stijl: lila verloop, kleine kop met streepje, grote donkerblauwe titel, witte kaarten, onderaan "Deel N · titel · x/N" en een voortgangsbalk. 8 tot 10 dia's, de laatste met de kernvraag of een samenvatting. Render met `node hulpmiddelen/render.js` (vanuit de map met `dias.html`) en bekijk een overzicht.
+3. **Stem**: ElevenLabs, stem **Ramon – Warm & Authentic** (`voice_id QkkCTFipKAsDWEnEuFkb`), model `eleven_multilingual_v2`, `generations_count 1`, één generatie per dia, allemaal op één flow (`creative_create_flow` eerst).
+   - **Vraag de gebruiker vooraf toestemming voor de credits** en noem de schatting (ongeveer 15 credits per seconde spraak: Deel 5, 3 minuten 24, kostte ongeveer 3.100 credits). Zonder die toestemming weigert het systeem een deel van de generaties.
+   - Schrijf uitspraak uit: "Claude punt md", "slash memory", "Opus vijf", "S.O.P.".
+   - Downloaden van de mp3's vraagt host `elevenlabsusercontent.com` in de netwerkinstellingen van de omgeving (staat sinds 24-11-2026 in Default). De links verlopen na een paar uur: download meteen.
+4. **Filmpje**: `bash hulpmiddelen/maak-mp4.sh <werkmap> <aantal dia's>` → `filmpje.mp4` (1080p, ongeveer 18 MB voor 3,5 minuut). Maak mappen leeg met `: >` of nieuwe mapnamen, niet met `rm -rf` op variabelen (dat wordt geblokkeerd).
+5. **Pagina's**: gebruik `hulpmiddelen/bouw-deel5-voorbeeld.py` als voorbeeld. Dat script:
+   - maakt `JJJJ-MM-slug/index.html` (video, met daaronder een `article.dagpagina artikel`) en oefenpagina's in submappen;
+   - zet een nieuwe regel bovenaan `filmpjes.json` (titel "Deel N · ...", datum, omschrijving);
+   - maakt `beeld/deelN.svg` in dezelfde stijl als de andere thumbnails;
+   - vervangt het blok `#nieuws` op de voorpagina door het nieuwe nieuws (badge "Nieuw", datum, links);
+   - zet oefeningen in de sitemap;
+   - verhoogt bij een CSS-wijziging `stijl.css?v=` op de nieuwe pagina's en op `index.html`.
+6. **Testen**: `python3 -m http.server` in de repo (nodig voor `filmpjes.json`), en screenshots met Playwright op 1280 en 390 breed. Controleer op JavaScript-fouten en horizontaal scrollen. Afgebroken mp4-verzoeken op de voorpagina zijn normaal (de duur wordt uit de metadata gelezen).
+7. **Live zetten** (de gebruiker heeft toestemming gegeven om te publiceren): branch → commit → `git -c push.negotiate=true push` → PR naar `main` → mergen. Controleer daarna met `actions_list` (list_workflow_runs) of "pages build and deployment" op `success` staat. De site zelf is vanuit de cloudsessie niet bereikbaar, dus laat de gebruiker hem bekijken.
+8. **Afronden**: meld de link (https://claude-leren.promptstad.nl/), wat er nieuw is, en hoeveel ElevenLabs-credits er gebruikt zijn.

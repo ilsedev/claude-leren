@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1920px;height:1080px;overflow:hidden;font-family:'DM Sans',sans-serif;color:#1A2340}
+.dia{position:absolute;inset:0;display:none;padding:105px 150px 0;
+ background:radial-gradient(60% 70% at 10% 15%,#D6D0F5 0%,transparent 70%),radial-gradient(50% 60% at 85% 90%,#DCD6F7 0%,transparent 70%),linear-gradient(135deg,#E4E0F8,#F4F3FB 60%,#ECEAF8)}
+.dia.on{display:block}
+.dia::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(122,111,214,.10) 1px,transparent 1px);background-size:6px 6px;pointer-events:none}
+.eb{display:flex;align-items:center;gap:18px;font-family:'Plus Jakarta Sans';font-weight:700;font-size:26px;letter-spacing:.2em;text-transform:uppercase;color:#4E43A0}
+.eb::before{content:"";width:56px;height:3px;background:#7A6FD6;border-radius:2px}
+h1{position:relative;font-family:'Plus Jakarta Sans';font-weight:800;font-size:82px;letter-spacing:-.03em;color:#0D1B3E;line-height:1.08;margin-top:26px}
+h1.bar::before{content:"";position:absolute;left:-38px;top:10px;bottom:10px;width:8px;background:#7A6FD6;border-radius:3px}
+.groot{padding-top:300px}.groot h1{font-size:110px;margin-top:30px}
+.sub{font-size:36px;color:#5C6480;margin-top:30px;line-height:1.45}
+.sub li{list-style:none;padding-left:34px;position:relative;margin:10px 0}
+.sub li::before{content:"";position:absolute;left:0;top:22px;width:10px;height:10px;border-radius:50%;background:#7A6FD6}
+.voet{position:absolute;left:150px;bottom:52px;font-size:28px;color:#5C6480;z-index:2}
+.balk{position:absolute;left:0;bottom:0;height:8px;background:#7A6FD6;z-index:2}
+.kaarten{display:flex;gap:28px;margin-top:60px;flex-wrap:wrap}
+.k{background:rgba(255,255,255,.92);border-radius:22px;padding:34px 36px;box-shadow:0 10px 30px rgba(13,27,62,.08);flex:1;min-width:0}
+.k.sel{outline:3px solid #7A6FD6}
+.nr{width:62px;height:62px;border-radius:50%;background:#1B2A5C;color:#B9B1F2;font:800 32px 'Plus Jakarta Sans';display:flex;align-items:center;justify-content:center;margin-bottom:26px}
+.k b{display:block;font:800 40px/1.15 'Plus Jakarta Sans';color:#0D1B3E;letter-spacing:-.01em}
+.k span{display:block;font-size:28px;color:#5C6480;margin-top:12px;line-height:1.35}
+.chips{display:flex;gap:22px;margin-top:56px;flex-wrap:wrap}
+.chip{font:700 34px 'Plus Jakarta Sans';padding:20px 34px;border-radius:999px;border:3px solid #7A6FD6;background:#fff;color:#0D1B3E}
+.chip.d{background:#0D1B3E;border-color:#0D1B3E;color:#fff}
+s{text-decoration-color:#C0141A;text-decoration-thickness:4px}
+/* was/wordt */
+.ww{margin-top:44px;background:rgba(255,255,255,.92);border-radius:22px;box-shadow:0 10px 30px rgba(13,27,62,.08);overflow:hidden}
+.ww div{display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;padding:20px 40px;font-size:31px;border-top:1px solid #E3E1F2}
+.ww div:first-child{border-top:0;background:#0D1B3E;color:#B9B1F2;font:800 22px 'Plus Jakarta Sans';letter-spacing:.16em;text-transform:uppercase;padding:20px 40px}
+.ww .w{color:#8A8FA3}
+.ww .p{color:#7A6FD6;font-weight:800;font-size:36px;text-align:center}
+.ww .n{color:#0D1B3E;font-weight:700}
+.tag{font:800 18px 'Plus Jakarta Sans';letter-spacing:.12em;padding:6px 14px;border-radius:999px;background:#E3F5EC;color:#1A7A55;margin-right:14px;vertical-align:4px}
+/* checklist */
+.cl{background:rgba(255,255,255,.92);border-radius:22px;padding:30px 40px;box-shadow:0 10px 30px rgba(13,27,62,.08)}
+.cl p{display:flex;justify-content:space-between;align-items:center;font-size:32px;padding:14px 0;border-top:1px solid #E3E1F2}
+.cl p:first-child{border-top:0}
+.pf{font:800 22px 'Plus Jakarta Sans';letter-spacing:.1em;color:#fff;background:#107C41;padding:8px 20px;border-radius:999px}
+.pf.f{background:#C42B1C}
+.twee{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:50px;align-items:start}
+.lbl{font:800 22px 'Plus Jakarta Sans';letter-spacing:.16em;text-transform:uppercase;color:#4E43A0;margin-bottom:14px}
+.boom{font:500 36px/1.9 'JetBrains Mono',monospace;color:#0D1B3E}
+.boom small{font:400 26px 'DM Sans';color:#5C6480;margin-left:18px}
+.boom .in{padding-left:60px;color:#4E43A0}
+.quote{margin-top:50px;font-size:34px;font-style:italic;color:#4E43A0;max-width:1500px;line-height:1.45}
+.vraag{margin-top:60px;background:#0D1B3E;color:#fff;border-radius:28px;padding:60px 70px;font:800 64px/1.2 'Plus Jakarta Sans';letter-spacing:-.02em;max-width:1500px}
+.vraag em{font-style:normal;color:#B9B1F2}
+</style></head><body>
+
+<section class="dia groot"><p class="eb">Deel 5 · Korter prompten</p><h1>Korter prompten,<br>scherper briefen</h1>
+<ul class="sub"><li>Wat je kunt loslaten</li><li>Wat ervoor in de plaats komt</li><li>Kort is niet hetzelfde als vaag</li></ul></section>
+
+<section class="dia"><p class="eb">Was en wordt</p><h1 class="bar">Ooit goed advies. Nu niet meer nodig.</h1>
+<div class="ww"><div><span>Was</span><span></span><span>Wordt</span></div>
+<div><span class="w"><s>"Je bent een adviseur met 20 jaar ervaring…"</s></span><span class="p">→</span><span class="n">Hooguit één zin</span></div>
+<div><span class="w"><s>"Check je werk."</s></span><span class="p">→</span><span class="n"><span class="tag">Nieuw</span>Pass/fail-lijst</span></div>
+<div><span class="w"><s>ZEER BELANGRIJK, ALTIJD, NOOIT</s></span><span class="p">→</span><span class="n">Gewone zinnen</span></div>
+<div><span class="w"><s>"Denk goed na." "Ga door."</s></span><span class="p">→</span><span class="n">Het juiste inspanningsniveau</span></div>
+<div><span class="w"><s>Een CLAUDE.md die blijft groeien</s></span><span class="p">→</span><span class="n">Onder de 200 regels</span></div></div></section>
+
+<section class="dia"><p class="eb">De briefing</p><h1 class="bar">Begin met het doel</h1>
+<div class="kaarten"><div class="k sel"><div class="nr">1</div><b>Wat en waarom</b><span>met de echte gegevens: Excel of CSV</span></div>
+<div class="k"><div class="nr">2</div><b>Kwaliteits­norm</b><span>voorbeelden die jij goed vindt</span></div>
+<div class="k"><div class="nr">3</div><b>Tools</b><span>welke wel, welke niet</span></div>
+<div class="k"><div class="nr">4</div><b>Vrijheid</b><span>mag het plan onderweg anders?</span></div>
+<div class="k"><div class="nr">5</div><b>De check</b><span>ja/nee-vragen</span></div></div></section>
+
+<section class="dia"><p class="eb">De briefing</p><h1 class="bar">Laat Claude je interviewen</h1>
+<div class="twee"><div class="k"><div class="lbl">Aan Claude</div><span style="font-size:34px;color:#1A2340;line-height:1.45">Stel me eerst vragen over de briefing, één voor één. Begin pas als ik akkoord geef.</span></div>
+<div class="chips" style="margin-top:0"><span class="chip d">één vraag tegelijk</span><span class="chip">jij antwoordt alleen</span><span class="chip">eindigt bij het doel</span></div></div></section>
+
+<section class="dia"><p class="eb">Je vaste werkwijze</p><h1 class="bar">Een SOP: wel of niet meegeven?</h1>
+<div class="kaarten"><div class="k sel"><div class="nr">1</div><b>"Hoe zou jij het doen?"</b><span>daarna jouw SOP ernaast: wat mist er?</span></div>
+<div class="k"><div class="nr">2</div><b>Eerst jouw SOP</b><span>"Weet jij een efficiëntere manier?"</span></div>
+<div class="k"><div class="nr">3</div><b>Planmodus</b><span>beoordeel eerst de aanpak van Claude</span></div></div></section>
+
+<section class="dia"><p class="eb">De check</p><h1 class="bar">Pass of fail, vóór het resultaat</h1>
+<div class="twee"><div><div class="chips" style="margin-top:0;flex-direction:column;align-items:flex-start"><span class="chip">niet: <s>"maak het professioneel"</s></span><span class="chip d">wel: "staat elk bedrag zo in de CSV?"</span></div>
+<p class="sub" style="font-size:30px">Lukt een pass niet? Dan mag Claude een fail geven en uitleggen waarom.</p></div>
+<div class="cl"><p>Elk bedrag staat zo in de CSV <span class="pf">PASS</span></p><p>Alle totalen kloppen <span class="pf">PASS</span></p><p>Onder de 200 woorden <span class="pf">PASS</span></p><p>Stijl coalitieakkoord <span class="pf f">FAIL</span></p></div></div></section>
+
+<section class="dia"><p class="eb">Frisse ogen</p><h1 class="bar">Review in een verse sessie</h1>
+<div class="kaarten"><div class="k"><div class="lbl">Sessie 1</div><b>Maakt het werk</b><span>en zegt: klaar</span></div>
+<div style="align-self:center;font:800 60px 'Plus Jakarta Sans';color:#7A6FD6">→</div>
+<div class="k sel"><div class="lbl">Sessie 2</div><b>Leest kritisch</b><span>zag de redeneringen niet, vinkt dezelfde lijst af</span></div></div></section>
+
+<section class="dia"><p class="eb">CLAUDE.md</p><h1 class="bar">Kort, en stijl apart</h1>
+<div class="twee"><div class="k boom"><div>CLAUDE.md<small>&lt; 200 regels</small></div><div class="in">werkschrijfstijl.md</div><div class="in">gemeenteraadstijl.md</div><div class="in">directiestijl.md</div><div class="in">huisstijl.md</div></div>
+<div class="chips" style="margin-top:0;flex-direction:column;align-items:flex-start"><span class="chip d">"Schrijf je voor de raad? Lees dan eerst…"</span><span class="chip">niet: <s>@gemeenteraadstijl.md</s></span><span class="chip">/memory: wat onthoudt Claude?</span></div></div></section>
+
+<section class="dia"><p class="eb">Gewoontes</p><h1 class="bar">Skill, inspanning, vers beginnen</h1>
+<div class="kaarten"><div class="k"><div class="nr">1</div><b>Maandelijks? Skill.</b><span>"Verander wat we zojuist gemaakt hebben in een skill."</span></div>
+<div class="k"><div class="nr">2</div><b>Inspanning</b><span>laag: vraag en antwoord<br>hoog: fouten zoeken</span></div>
+<div class="k"><div class="nr">3</div><b>Vers beginnen</b><span>nieuwe deeltaak, nieuwe sessie</span></div></div></section>
+
+<section class="dia"><p class="eb">De kernvraag</p><h1 class="bar">Wat heeft Claude écht van jou nodig?</h1>
+<div class="vraag">Claude weet <em>hoe</em>.<br>Welke informatie kan <em>alleen jij</em> geven?</div></section>
+
+<script>
+const d=[...document.querySelectorAll('.dia')],N=d.length;
+d.forEach((s,i)=>{s.insertAdjacentHTML('beforeend',`<p class="voet">Deel 5 · Korter prompten · ${i+1}/${N}</p><div class="balk" style="width:${(i+1)/N*100}%"></div>`)});
+window.toon=i=>{d.forEach(s=>s.classList.remove('on'));d[i].classList.add('on')};toon(0);
+</script></body></html>
