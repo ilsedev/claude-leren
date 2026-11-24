@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../stijl.css?v=19">
+<title>Deel 5 · Korter prompten, scherper briefen</title>
+</head>
+<body>
+<nav><div class="nav-in"><a class="home-logo" href="../" aria-label="Home" title="Home"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16.0 12.8L16.0 1.5M17.6 13.2L21.5 6.5M18.8 14.4L28.6 8.7M19.2 16.0L27.0 16.0M18.8 17.6L28.6 23.2M17.6 18.8L21.5 25.5M16.0 19.2L16.0 30.5M14.4 18.8L10.5 25.5M13.2 17.6L3.4 23.3M12.8 16.0L5.0 16.0M13.2 14.4L3.4 8.7M14.4 13.2L10.5 6.5" stroke="#D97757" stroke-width="3" stroke-linecap="round"/></svg></a><a class="knop actief" href="../#filmpjes">Claude Leren</a><a class="knop" href="../cheat-sheet/"><span class="slash">/</span>Cheat Sheet</a></div></nav>
+<div class="band"><h1><span>Deel 5:</span> Korter prompten, scherper briefen</h1></div>
+<div class="intro"><p>De nieuwste Claude-modellen hebben geen lange prompts meer nodig, wel duidelijke. Wat je kunt loslaten, wat ervoor in de plaats komt, en de kernvraag: welke informatie kan alleen jij geven? Onder het filmpje staan het hele artikel en twee oefeningen.</p></div>
+<main><div class="inner"><a class="terug" href="../">← Alle filmpjes</a><div class="video"><video src="filmpje.mp4" controls preload="metadata" playsinline></video></div>
+<article class="dagpagina artikel">
+<h2>De kernvraag</h2>
+<p>Claude kan zelf goed bedenken <em>hoe</em> iets moet. Stel jezelf daarom bij elke prompt één vraag:</p>
+<div class="kernvraag">Welke informatie kan <em>alleen jij</em> geven, en heeft Claude dus echt van jou nodig?</div>
+<p>Dat is de laatste les uit de video waar dit deel op gebaseerd is, en eigenlijk de samenvatting van alles hieronder. Korter prompten betekent niet vager prompten: wat je weglaat aan franje, stop je in een scherp doel en een toetsbare check.</p>
+
+<h2>Was en wordt in één overzicht</h2>
+<div class="ww"><div class="ww-rij"><div>Was: tot een paar weken geleden</div><div></div><div>Wordt: vanaf nu</div></div>
+<div class="ww-rij"><div class="ww-was"><s>"Je bent een adviseur met 20 jaar ervaring op het hoogste niveau…"</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Hooguit één korte zin</b> over de rol, of weglaten als doel en context duidelijk zijn.<span class="ww-bron">Prompting-gids van Anthropic: "Even a single sentence makes a difference."</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>"Check je werk."</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Een pass/fail-lijst</b> die Claude afvinkt vóór het resultaat.<span class="ww-bron">Anthropic: Opus 5 controleert zichzelf al</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>ZEER BELANGRIJK, ALTIJD, NOOIT</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Gewone zinnen</b>, met de reden erbij.<span class="ww-bron">Anthropic: "What you can stop doing"</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>"Denk goed na." "Ga door, niet lui zijn."</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Het juiste inspanningsniveau</b> (<code>/effort</code>).<span class="ww-bron">Anthropic: "What you can stop doing"</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>Een lange prompt waarin je alles zelf uitschrijft</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Een korte briefing met een doel</b>, of laat Claude je interviewen.</div></div>
+<div class="ww-rij"><div class="ww-was"><s>Je vaste werkwijze (SOP) meteen meegeven</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Eerst vragen: "Hoe zou jij het doen?"</b></div></div>
+<div class="ww-rij"><div class="ww-was"><s>Zelf nalezen in dezelfde sessie</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Review in een verse sessie.</b><span class="ww-bron">Anthropic: "A second session is also the easiest independent reviewer you can get."</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>Een CLAUDE.md die blijft groeien</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Onder de 200 regels</b>, stijl per doelgroep apart.<span class="ww-bron">Anthropic: "under 200 lines per CLAUDE.md file"</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>Mappen en bestanden uitleggen in CLAUDE.md</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Claude kijkt zelf.</b> Schrijf alleen op wat Claude niet kan zien.<span class="ww-bron">Anthropic: "Claude reads the repo itself."</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>Eén lange sessie voor alles</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Vers beginnen</b> bij een nieuwe deeltaak.<span class="ww-bron">Anthropic: "/clear between unrelated tasks. It costs nothing."</span></div></div>
+<div class="ww-rij"><div class="ww-was">Context en echte gegevens meegeven</div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag blijft">Blijft</span><b>Blijft.</b> Geef het echte Excel- of CSV-bestand mee.</div></div>
+<div class="ww-rij"><div class="ww-was">Voorbeelden van goede output</div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag blijft">Blijft</span><b>Blijft.</b> Nu als je kwaliteitsnorm.</div></div>
+</div>
+<blockquote>"Every one of these was good advice when it was written. Most were workarounds for something the model couldn't reliably do yet, and the models have since caught up. If a few are still habits, here's why it's safe to drop them."<cite>Anthropic, Claude Code-documentatie: Best practices, "What you can stop doing"</cite></blockquote>
+
+<h2>De rol: hooguit één zin</h2>
+<p>Lange rolbeschrijvingen ("je bent een ervaren tekstschrijver en financieel adviseur op het hoogste niveau…") kun je loslaten. Ze kosten tokens en voegen weinig toe. De lijst "What you can stop doing" noemt de rol niet, en de algemene prompting-gids van Anthropic vindt een korte rol nog nuttig. Mijn advies: één zin is genoeg, en als doel en context al duidelijk zijn, laat je hem weg.</p>
+
+<h2>"Check je werk" werkt niet meer</h2>
+<p>Claude Opus 5 controleert zijn eigen werk al. Een algemene regel als "check je werk" laat Claude alleen nog een keer doen wat het al deed. Dat kost tokens en het antwoord wordt er niet beter van. Anthropic noemt dat <em>over-verification</em>. Wat wel werkt: een pass/fail-lijst (zie hieronder).</p>
+
+<h2>De briefing: kort, maar niet vaag</h2>
+<p>Hoe concreter je doel, hoe gerichter de uitkomst. Een briefing heeft een doel en vijf onderdelen:</p>
+<ol><li><b>Wat en waarom</b>, met de echte gegevens, zoals je Excel- of CSV-bestand.</li><li><b>De kwaliteitsnorm</b>: voorbeelden die jij goed vindt, of laat Claude ze zoeken en kies zelf.</li><li><b>Tools</b>: welke Claude moet gebruiken, en of andere ook mogen.</li><li><b>Vrijheid in het plan</b>: mag Claude het plan onderweg aanpassen? Of: "Wil je het plan aanpassen, vraag het me dan eerst."</li><li><b>De check</b>: een lijst met ja/nee-vragen.</li></ol>
+<p>Je hoeft dit niet zelf uit te schrijven. Laat Claude je <b>interviewen</b>, één vraag tegelijk. Het interview eindigt weer bij het doel.</p>
+
+<h2>Je vaste werkwijze (SOP): wel of niet meegeven?</h2>
+<p>Een SOP is hoe mensen iets vaak al jaren doen. Claude weet het misschien handiger. Drie manieren:</p>
+<ul><li>Vraag eerst "Hoe zou jij het doen?", geef daarna je SOP en vraag wat er ontbreekt.</li><li>Geef eerst je SOP en vraag of Claude een efficiëntere manier weet.</li><li>Laat je SOP weg en beoordeel de aanpak van Claude in de planmodus.</li></ul>
+
+<h2>De check: pass of fail</h2>
+<p>Niet: "Maak het rapport professioneel." Wel: "Check of elk bedrag uit de CSV in het rapport staat en klopt." Meer voorbeelden:</p>
+<ul><li>Is elke gebruikte waarde precies gelijk aan de bron?</li><li>Kloppen alle totalen?</li><li>Voldoet de tekst aan de schrijfstijl van het coalitieakkoord?</li><li>Is de tekst korter dan 200 woorden?</li></ul>
+<p>Zet in je prompt: "Markeer elke regel met PASS of FAIL voordat je de output laat zien." Pas als alles PASS is, is het klaar. Lukt dat redelijkerwijs niet, bijvoorbeeld door tegenstrijdige input, dan mag Claude FAIL geven en uitleggen waarom. Tip: laat Claude je helpen de lijst op te stellen.</p>
+
+<h2>Frisse ogen: review in een verse sessie</h2>
+<p>Zegt Claude dat het klaar is? Open een nieuwe sessie die niet heeft meegewerkt en laat die de output beoordelen: een code review bij software, een kritische lezing bij een voorstel. Geef dezelfde pass/fail-lijst mee. Die sessie heeft de redeneringen niet gezien en kijkt dus echt fris.</p>
+
+<h2>CLAUDE.md kort en opgeruimd</h2>
+<p>Claude leest CLAUDE.md aan het begin van elke sessie. Houd hem onder de 200 regels en bekijk hem bij elke grote opdracht, of wekelijks. Zet stijl per lezer in losse bestanden, zoals <code>werkschrijfstijl.md</code>, <code>gemeenteraadstijl.md</code>, <code>directiestijl.md</code>, <code>huisstijl.md</code> of <code>claude-like-me.md</code>.</p>
+<p><b>Let op:</b> een verwijzing met <code>@bestand.md</code> laadt het bestand altijd mee, dus dat bespaart niets. Schrijf liever in gewone woorden wanneer Claude het moet lezen ("Schrijf je voor de gemeenteraad? Lees dan eerst gemeenteraadstijl.md."), of maak er een skill van.</p>
+
+<h2>Memory, skills, inspanning en vers beginnen</h2>
+<ul><li><b>Auto-memory</b> staat standaard aan: Claude maakt eigen notities en vertrouwt daarop. Met <code>/memory</code> zie je wat erin staat, en kun je het uitzetten. Een bewuste keuze, want het kan je volgende opdrachten helpen of hinderen.</li>
+<li><b>Skills</b>: doe je iets maandelijks of vaker, zeg dan: "Verander wat we zojuist gemaakt hebben in een skill om te bewaren." Ging er later iets mis, vraag Claude dan de skill bij te werken. Een oude skill test je eerst.</li>
+<li><b>Inspanning</b> (<code>/effort</code>): laag voor snel vraag en antwoord, gemiddeld voor routinewerk, hoog als je een fout zoekt, max voor complexe problemen. Combineren kan: maken op gemiddeld, testen en controleren op hoog.</li>
+<li><b>Vers beginnen</b>: in een lange sessie neemt Claude steeds alles mee. Nieuwe deeltaak? <code>/clear</code> of een nieuwe sessie.</li></ul>
+
+<h2>Vanaf vandaag</h2>
+<div class="vanaf"><div><b>1</b>Vraag je af: wat kan <em>alleen ik</em> Claude vertellen?</div><div><b>2</b>Schrap de franje: geen lange rol, geen "check je werk", geen HOOFDLETTERS.</div><div><b>3</b>Voeg een pass/fail-lijst toe en laat een verse sessie reviewen.</div><div><b>4</b>Ruim je CLAUDE.md op: onder 200 regels, stijl apart.</div></div>
+<div class="knoppen"><a href="oefening-briefing/">Oefening: een scherpe briefing →</a><a class="licht" href="oefening-claude-md/">Oefening: CLAUDE.md opschonen →</a></div>
+
+<h2>Bronnen</h2>
+<ul><li>Eric Tech, "Give Me 10 Minutes and I'll Make Claude Code 100x Smarter", YouTube, 22 november 2026.</li>
+<li><a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Claude Code: Best practices</a></li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5" target="_blank" rel="noopener">Prompting Claude Opus 5</a></li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener">Prompting best practices</a></li>
+<li><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">CLAUDE.md en memory</a></li></ul>
+</article>
+</div></main>
+<footer class="voet"><a href="../sitemap/">Sitemap</a></footer>
+<script src="../afspelen.js"></script>
+</body>
+</html>
