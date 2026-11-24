@@ -130,3 +130,6 @@ video{width:100%;display:block;border-radius:8px;background:#000}
 .nieuws li a:hover{background:#DCD8F3}
 .nieuws li b{font-family:'Plus Jakarta Sans',sans-serif;color:var(--navy)}
 .nieuws li span{display:block;font-size:.88rem;color:var(--tekst-zacht)}
+
+@media(max-width:480px){.nav-in .knop{white-space:nowrap;font-size:.85rem;padding:.4rem .6rem}.mob-weg{display:none}}
+.nieuws .meer{margin-top:.9rem}

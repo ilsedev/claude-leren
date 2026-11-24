@@ -26,6 +26,8 @@ description: Een nieuw deel (filmpje met stem, artikel, oefeningen en nieuws) to
    - vervangt het blok `#nieuws` op de voorpagina door het nieuwe nieuws (badge "Nieuw", datum, links);
    - zet oefeningen in de sitemap;
    - verhoogt bij een CSS-wijziging `stijl.css?v=` op de nieuwe pagina's en op `index.html`.
+   - **Indeling (sinds 24-11-2026):** de voorpagina toont alleen de delen met de nieuwste `datum` in `filmpjes.json`. Oudere delen verschijnen vanzelf op `eerder/`. Geef een nieuw deel dus een nieuwe datum.
+   - **Geen oefeningen meer**, maar een pagina `JJJJ-MM-slug/prompts/` met kant-en-klare prompts (titel, "Wanneer:", prompt met kopieerknop, tip). Zie deel 5 als voorbeeld. Een skill om te downloaden zet je als zip in een eigen map naast de prompts.
 6. **Testen**: `python3 -m http.server` in de repo (nodig voor `filmpjes.json`), en screenshots met Playwright op 1280 en 390 breed. Controleer op JavaScript-fouten en horizontaal scrollen. Afgebroken mp4-verzoeken op de voorpagina zijn normaal (de duur wordt uit de metadata gelezen).
 7. **Live zetten** (de gebruiker heeft toestemming gegeven om te publiceren): branch → commit → `git -c push.negotiate=true push` → PR naar `main` → mergen. Controleer daarna met `actions_list` (list_workflow_runs) of "pages build and deployment" op `success` staat. De site zelf is vanuit de cloudsessie niet bereikbaar, dus laat de gebruiker hem bekijken.
 8. **Afronden**: meld de link (https://claude-leren.promptstad.nl/), wat er nieuw is, en hoeveel ElevenLabs-credits er gebruikt zijn.

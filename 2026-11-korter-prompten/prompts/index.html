@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../stijl.css?v=20">
+<title>Kant-en-klare prompts · Deel 5</title>
+<style>
+.prompt{position:relative}
+.prompt .kopieer{position:absolute;top:.5rem;right:.5rem;font:800 .8rem 'Plus Jakarta Sans',sans-serif;background:var(--accent);color:var(--navy);border:0;border-radius:6px;padding:.35rem .7rem;cursor:pointer}
+.prompt pre.voorbeeld{padding-top:2.4rem;white-space:pre-wrap;overflow-wrap:anywhere}
+h2.groep{margin-top:2.2rem}
+.stap.uitgelicht{border-left:4px solid var(--accent);padding-left:1rem}
+</style>
+</head>
+<body>
+<nav><div class="nav-in"><a class="home-logo" href="../../" aria-label="Home" title="Home"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16.0 12.8L16.0 1.5M17.6 13.2L21.5 6.5M18.8 14.4L28.6 8.7M19.2 16.0L27.0 16.0M18.8 17.6L28.6 23.2M17.6 18.8L21.5 25.5M16.0 19.2L16.0 30.5M14.4 18.8L10.5 25.5M13.2 17.6L3.4 23.3M12.8 16.0L5.0 16.0M13.2 14.4L3.4 8.7M14.4 13.2L10.5 6.5" stroke="#D97757" stroke-width="3" stroke-linecap="round"/></svg></a><a class="knop actief" href="../../#filmpjes">Claude Leren</a><a class="knop" href="../../eerder/">Eerdere<span class="mob-weg"> filmpjes</span></a><a class="knop" href="../../cheat-sheet/"><span class="slash">/</span>Cheat Sheet</a></div></nav>
+<div class="band"><h1><span>Deel 5:</span> Kant-en-klare prompts</h1></div>
+<div class="intro"><p>Prompts en een skill die je meteen kunt gebruiken, bij het artikel <a href="../">Korter prompten, scherper briefen</a>. Kopieer, vul in wat tussen [haken] staat, en gebruik ze. Gebruik bij het uitproberen alleen fictieve gegevens.</p></div>
+<main><div class="inner smal"><a class="terug" href="../">← Deel 5: filmpje en artikel</a>
+<article class="dagpagina">
+<h2 class="groep">Briefen</h2><section class="stap uitgelicht" id="interview"><h2>Laat Claude je interviewen: de skill</h2><p><b>Wanneer:</b> je hebt een grotere opdracht en weet nog niet precies wat je wilt. Je geeft een braindump, Claude stelt je één voor één vragen en maakt er een korte briefing van: de klus, het waarom, de vangrails en wanneer het klaar is. Pas als jij akkoord geeft, begint Claude.</p>
+<div class="knoppen"><a href="../interview-skill/interview-mij.zip" download>Download de skill (zip)</a><a class="licht" href="../interview-skill/interview-mij/SKILL.md" target="_blank" rel="noopener">Bekijk SKILL.md</a></div>
+<p><b>Installeren in Claude Code:</b> pak de zip uit in de map <code>.claude/skills/</code> in je project, of in <code>~/.claude/skills/</code> voor al je projecten. Start daarna een nieuwe sessie en typ <code>/interview-mij</code>, of zeg gewoon "interview mij".</p>
+<p><b>Installeren op claude.ai of in de Claude-app:</b> open de instellingen, ga naar Skills en upload daar de zip.</p></section>
+<section class="stap"><h2>Interview zonder skill</h2><p><b>Wanneer:</b> je wilt het interview één keer proberen, zonder iets te installeren. Zet dit onder je braindump.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Interview me, één vraag tegelijk, over alles wat nog onduidelijk is.
+Vraag in elk geval naar: het waarom, de gegevens, voorbeelden die ik goed vind, wat er mis kan gaan, en wanneer het klaar is.
+Vat daarna de briefing kort samen en begin pas als ik akkoord geef.</pre></div><div class="tip"><b>Tip</b>Het interview eindigt weer bij het doel: wat Claude oplevert, moet daaraan voldoen.</div></section>
+<section class="stap"><h2>Vijf opties in plaats van één antwoord</h2><p><b>Wanneer:</b> je weet pas wat je wilt als je het ziet, bijvoorbeeld bij een titel, een opzet of een eerste zin.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Geef me vijf verschillende opties voor [invalshoek / opzet / titel / openingszin] van [opdracht].
+Maak ze echt verschillend, en zet bij elke optie in één zin voor wie of waarvoor die het beste werkt.
+Begin nog niet met uitwerken: ik kies eerst.</pre></div><div class="tip"><b>Tip</b>Werk stap voor stap: eerst invalshoeken, dan opzetten, dan versies. Zo kies je steeds in plaats van te corrigeren.</div></section>
+<section class="stap"><h2>Je vaste werkwijze (SOP) naast die van Claude</h2><p><b>Wanneer:</b> je hebt een vaste werkwijze, maar Claude weet het misschien handiger.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Ik wil [opdracht]. Het doel is: [doel].
+Hoe zou jij dit aanpakken? Geef je aanpak in maximaal 6 stappen. Begin nog niet.
+
+[Na het antwoord van Claude:]
+Zo doen wij het nu altijd:
+[plak hier je vaste werkwijze]
+
+Vergelijk de twee. Wat ben ik vergeten, en wat ben jij vergeten? Welke aanpak is efficiënter, en waarom?</pre></div><div class="tip"><b>Tip</b>Of laat je werkwijze helemaal weg en beoordeel de aanpak van Claude in de planmodus.</div></section>
+<h2 class="groep">Controleren</h2><section class="stap"><h2>Een opdracht met een pass/fail-lijst</h2><p><b>Wanneer:</b> je wilt een resultaat dat je kunt toetsen, in plaats van "maak het professioneel". Dit voorbeeld gebruikt fictieve cijfers.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Hieronder staat een fictief overzicht van de inkoopuitgaven per categorie (CSV).
+Maak er een kort rapport van voor het MT: per categorie het totaal, de grootste post en één zin duiding.
+
+Checklist (markeer elke regel met PASS of FAIL voordat je het rapport laat zien):
+1. Elk bedrag in het rapport staat precies zo in de CSV.
+2. Alle totalen kloppen.
+3. Het rapport is korter dan 300 woorden.
+4. Er staan geen conclusies in die niet uit de cijfers volgen.
+
+Het rapport is pas klaar als alle regels PASS zijn. Lukt dat niet, geef dan FAIL en leg uit waarom.
+
+categorie;leverancier;bedrag
+ICT;Leverancier A;48.200
+ICT;Leverancier B;12.950
+Schoonmaak;Leverancier C;31.400
+Catering;Leverancier D;8.700
+Catering;Leverancier E;4.150</pre></div><div class="tip"><b>Tip</b>"Professioneel" kun je niet afvinken, "elk bedrag staat zo in de CSV" wel.</div></section>
+<section class="stap"><h2>Samen de checklist maken</h2><p><b>Wanneer:</b> je weet niet goed welke regels je in je pass/fail-lijst zet.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Ik ga je vragen om [opdracht]. Het doel is: [doel].
+
+Help me eerst een checklist te maken waarmee we toetsen of het resultaat goed is.
+- Maximaal 6 regels.
+- Elke regel is met ja of nee te beantwoorden.
+- Geen vage regels als &quot;is het professioneel?&quot;. Wel bijvoorbeeld: &quot;Komt elk bedrag overeen met de bron?&quot;
+
+Ik kies daarna welke regels we gebruiken.</pre></div><div class="tip"><b>Tip</b>Zet daarna in je opdracht: "Markeer elke regel met PASS of FAIL voordat je de output laat zien."</div></section>
+<section class="stap"><h2>Review in een verse sessie</h2><p><b>Wanneer:</b> Claude zegt dat het klaar is. Plak dit in een nieuwe sessie die niet heeft meegewerkt.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Hieronder staat [een voorstel / rapport / notitie] voor [doelgroep].
+Jij hebt niet meegewerkt aan het maken ervan. Lees het kritisch.
+
+Werk deze checklist af en markeer elke regel met PASS of FAIL:
+1. [regel uit je checklist]
+2. [regel uit je checklist]
+3. [regel uit je checklist]
+
+Noem daarna maximaal 3 verbeterpunten, belangrijkste eerst. Herschrijf niets.
+
+[Plak hier het resultaat]</pre></div><div class="tip"><b>Tip</b>Bij software laat je de nieuwe sessie een code review doen. Zeg erbij waar die op moet letten.</div></section>
+<h2 class="groep">CLAUDE.md opruimen</h2><section class="stap"><h2>Kijk wat Claude elke sessie leest</h2><p><b>Wanneer:</b> je wilt weten welke instructies en notities er stilletjes meelezen.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Welke CLAUDE.md-bestanden en memory-bestanden heb je in deze sessie geladen?
+Geef per bestand: waar het staat, hoeveel regels het heeft, en in één zin waar het over gaat.</pre></div><div class="tip"><b>Tip</b>Je kunt het ook zelf bekijken met /memory.</div></section>
+<section class="stap"><h2>Laat Claude je CLAUDE.md doorlichten</h2><p><b>Wanneer:</b> je CLAUDE.md is in de loop van de tijd gegroeid.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Lees mijn CLAUDE.md en deel elke regel in bij één van deze groepen:
+A. Doet Claude al vanzelf, dus kan weg (zoals &quot;check je werk&quot;, &quot;denk goed na&quot;).
+B. Achterhaald of te zwaar aangezet (lange rolbeschrijvingen, HOOFDLETTERS, ZEER BELANGRIJK, ALTIJD/NOOIT).
+C. Alleen nodig bij bepaalde taken of doelgroepen, dus verplaatsen naar een los bestand.
+D. Echt nodig voor bijna elke sessie, dus laten staan.
+
+Verander nog niets. Laat een tabel zien met per regel de groep en een korte reden, en doe daarna een voorstel voor een nieuwe CLAUDE.md.
+
+Checklist (markeer elke regel met PASS of FAIL):
+1. De nieuwe CLAUDE.md heeft minder dan 200 regels.
+2. Er staan geen regels in HOOFDLETTERS of met ZEER BELANGRIJK.
+3. Elke regel uit groep D staat er nog in.
+4. Elke regel uit groep C heeft een nieuwe plek.</pre></div><div class="tip"><b>Tip</b>Twijfel je bij groep D? Haal de regel weg en kijk of je hem mist.</div></section>
+<section class="stap"><h2>Stijl per doelgroep afsplitsen</h2><p><b>Wanneer:</b> je schrijft voor verschillende lezers, zoals de gemeenteraad en de directie.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Maak voor de regels uit groep C losse, korte bestanden, bijvoorbeeld:
+- werkschrijfstijl.md: zakelijke documenten voor mijn werk
+- gemeenteraadstijl.md: teksten voor de gemeenteraad
+- directiestijl.md: teksten voor de directie
+- huisstijl.md: ontwerpen in de huisstijl
+- claude-like-me.md: teksten die klinken alsof ik ze zelf schrijf
+
+Zet in CLAUDE.md een kort blok &quot;Wanneer lees je wat&quot;, in gewone zinnen en zonder @-verwijzing. Bijvoorbeeld:
+&quot;Schrijf je voor de gemeenteraad? Lees dan eerst gemeenteraadstijl.md.&quot;
+
+Laat me de nieuwe bestanden zien voordat je ze opslaat.</pre></div><div class="tip"><b>Tip</b>Een @-verwijzing laadt het bestand altijd mee. Een gewone zin laat Claude het alleen lezen als het nodig is.</div></section>
+<section class="stap"><h2>Check wat Claude zelf onthoudt</h2><p><b>Wanneer:</b> je wilt weten of de eigen notities van Claude (auto-memory) nog kloppen.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Laat me zien wat er in je auto-memory staat voor dit project.
+Geef per notitie: wat je hebt onthouden, of het nog klopt met mijn CLAUDE.md, en of het botst met een van mijn stijlbestanden.
+Stel voor welke notities ik beter kan verwijderen. Verwijder nog niets.</pre></div><div class="tip"><b>Tip</b>Wil je niet dat Claude zelf notities maakt? Zet auto-memory uit via /memory.</div></section>
+<section class="stap"><h2>De wekelijkse check</h2><p><b>Wanneer:</b> elke week, of bij de start van een grote opdracht.</p><div class="prompt"><button class="kopieer" type="button">Kopieer</button><pre class="voorbeeld">Wekelijkse check van mijn CLAUDE.md. Markeer elke regel met PASS of FAIL:
+1. CLAUDE.md heeft minder dan 200 regels.
+2. Er zijn geen regels bijgekomen die maar bij één soort taak horen.
+3. Er staan geen regels in die Claude al vanzelf doet.
+4. Elk stijlbestand waar CLAUDE.md naar verwijst, bestaat nog.
+5. Auto-memory bevat geen notities die botsen met CLAUDE.md.
+
+Geef bij elke FAIL een voorstel. Verander nog niets.</pre></div><div class="tip"><b>Tip</b>Doe je dit wekelijks? Maak er een skill van.</div></section>
+</article>
+</div></main>
+<footer class="voet"><a href="../../sitemap/">Sitemap</a></footer>
+<script>
+document.querySelectorAll('.prompt .kopieer').forEach(b=>b.addEventListener('click',()=>{
+  const t=b.nextElementSibling.textContent;
+  const klaar=()=>{b.textContent='Gekopieerd';setTimeout(()=>b.textContent='Kopieer',1500)};
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(klaar).catch(()=>{});}
+}));
+</script>
+</body>
+</html>
