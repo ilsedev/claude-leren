@@ -31,6 +31,9 @@
 <div class="ww-rij"><div class="ww-was"><s>Een CLAUDE.md die blijft groeien</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Onder de 200 regels</b>, stijl per doelgroep apart.<span class="ww-bron">Anthropic: "under 200 lines per CLAUDE.md file"</span></div></div>
 <div class="ww-rij"><div class="ww-was"><s>Mappen en bestanden uitleggen in CLAUDE.md</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Claude kijkt zelf.</b> Schrijf alleen op wat Claude niet kan zien.<span class="ww-bron">Anthropic: "Claude reads the repo itself."</span></div></div>
 <div class="ww-rij"><div class="ww-was"><s>Eén lange sessie voor alles</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Vers beginnen</b> bij een nieuwe deeltaak.<span class="ww-bron">Anthropic: "/clear between unrelated tasks. It costs nothing."</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>Blijven corrigeren in dezelfde chat</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Terugspoelen</b> (<code>/rewind</code> of twee keer Esc) en je eerste prompt verbeteren.<span class="ww-bron">Anthropic: "after two failed corrections run /clear and write a better prompt instead of a third."</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>Om één antwoord vragen en dat bijschaven</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Vraag om vijf opties</b> en kies. Kiezen gaat sneller dan corrigeren.</div></div>
+<div class="ww-rij"><div class="ww-was"><s>Doorpraten tot de chat vol is</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Op tijd <code>/compact</code></b>, met erachter wat moet blijven.<span class="ww-bron">Anthropic: "/compact Focus on code samples and API usage tells Claude what to preserve."</span></div></div>
 <div class="ww-rij"><div class="ww-was">Context en echte gegevens meegeven</div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag blijft">Blijft</span><b>Blijft.</b> Geef het echte Excel- of CSV-bestand mee.</div></div>
 <div class="ww-rij"><div class="ww-was">Voorbeelden van goede output</div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag blijft">Blijft</span><b>Blijft.</b> Nu als je kwaliteitsnorm.</div></div>
 </div>
@@ -44,8 +47,12 @@
 
 <h2>De briefing: kort, maar niet vaag</h2>
 <p>Hoe concreter je doel, hoe gerichter de uitkomst. Een briefing heeft een doel en vijf onderdelen:</p>
-<ol><li><b>Wat en waarom</b>, met de echte gegevens, zoals je Excel- of CSV-bestand.</li><li><b>De kwaliteitsnorm</b>: voorbeelden die jij goed vindt, of laat Claude ze zoeken en kies zelf.</li><li><b>Tools</b>: welke Claude moet gebruiken, en of andere ook mogen.</li><li><b>Vrijheid in het plan</b>: mag Claude het plan onderweg aanpassen? Of: "Wil je het plan aanpassen, vraag het me dan eerst."</li><li><b>De check</b>: een lijst met ja/nee-vragen.</li></ol>
-<p>Je hoeft dit niet zelf uit te schrijven. Laat Claude je <b>interviewen</b>, één vraag tegelijk. Het interview eindigt weer bij het doel.</p>
+<ol><li><b>Wat en waarom</b>, met de echte gegevens, zoals je Excel- of CSV-bestand. Sla het waarom niet over: onderweg neemt Claude veel kleine beslissingen. Weet Claude waarom je iets wilt, dan beslist het zoals jij zou doen.</li><li><b>De kwaliteitsnorm</b>: voorbeelden die jij goed vindt, of laat Claude ze zoeken en kies zelf.</li><li><b>Tools</b>: welke Claude moet gebruiken, en of andere ook mogen.</li><li><b>Vrijheid in het plan</b>: mag Claude het plan onderweg aanpassen? Of: "Wil je het plan aanpassen, vraag het me dan eerst."</li><li><b>De check</b>: een lijst met ja/nee-vragen.</li></ol>
+<p>Je hoeft dit niet zelf uit te schrijven. Laat Claude je <b>interviewen</b>, één vraag tegelijk. Het interview eindigt weer bij het doel. Kort kan ook: zet onder je braindump "Interview me, één vraag tegelijk, over alles wat nog onduidelijk is."</p>
+<h3>Twee vragen voordat je op enter drukt</h3>
+<ul><li><b>Hoe kan iemand met goede bedoelingen dit toch verkeerd begrijpen?</b> Wat je dan bedenkt, zet je erbij als regel, met de reden erbij. Zo voorkom je dat Claude de verkeerde kant op gaat.</li>
+<li><b>Hoe ziet "klaar" eruit?</b> De nieuwste modellen doen eerder te veel dan te weinig: ze voegen soms stappen toe waar je niet om vroeg. Noem daarom de vorm, de lengte en de toon. Het beste: laat een eerder resultaat zien dat je goed vond.</li></ul>
+<p>Wil je juist méér dan het minimum, bijvoorbeeld bij een grote, open opdracht? Zeg dat dan. Anthropic schrijft: "Claude tends to read a request conservatively and build the smallest thing that satisfies it." Eén zin als "Wees ambitieus" helpt dan.</p>
 
 <h2>Je vaste werkwijze (SOP): wel of niet meegeven?</h2>
 <p>Een SOP is hoe mensen iets vaak al jaren doen. Claude weet het misschien handiger. Drie manieren:</p>
@@ -59,18 +66,32 @@
 <h2>Frisse ogen: review in een verse sessie</h2>
 <p>Zegt Claude dat het klaar is? Open een nieuwe sessie die niet heeft meegewerkt en laat die de output beoordelen: een code review bij software, een kritische lezing bij een voorstel. Geef dezelfde pass/fail-lijst mee. Die sessie heeft de redeneringen niet gezien en kijkt dus echt fris.</p>
 
+<h2>Kiezen in plaats van corrigeren</h2>
+<p>Je kent het misschien: Claude gaat de verkeerde kant op, je corrigeert, er gaat iets anders mis, je corrigeert weer. Na drie of vier rondes wordt het eerder slechter dan beter. Hoe komt dat?</p>
+<ul><li>Meestal ontbrak er vanaf het begin een regel of een stukje informatie.</li>
+<li>Claude leest bij elk bericht het hele gesprek opnieuw. Alle mislukte pogingen worden dus deel van waar Claude mee werkt.</li>
+<li>Elke correctie maakt het gesprek langer. Dat kost meer tokens, en een lang gesprek werkt minder scherp.</li></ul>
+<p><b>Spoel daarom terug.</b> Typ <code>/rewind</code> of druk twee keer op Esc. Kies de prompt waar het misging, zet de ontbrekende regel erin en ga van daaruit verder. Claude begint dan schoon, met de oplossing er al in. Anthropic adviseert hetzelfde: na twee mislukte correcties niet een derde keer corrigeren, maar opnieuw beginnen met een betere prompt.</p>
+<p><b>Voorbeeld.</b> Je vraagt een overzicht van alle contracten die dit jaar aflopen. Halverwege zie je dat Claude ook contracten met een verlengingsoptie meetelt. Spoel terug naar je eerste prompt en voeg toe: "Tel alleen contracten zonder verlengingsoptie mee."</p>
+<p><b>Vraag om opties.</b> Vaak weet je pas wat je wilt als je het ziet. Vraag daarom niet om één antwoord, maar om vijf. Dan kies je in plaats van te corrigeren. Dat kan bij elke stap: eerst vijf invalshoeken, dan drie opzetten, dan twee versies van de tekst.</p>
+<p>Meer over terugspoelen: <a href="../cheat-sheet/dag-3/">cheat sheet, dag 3: /rewind</a>.</p>
+
 <h2>CLAUDE.md kort en opgeruimd</h2>
 <p>Claude leest CLAUDE.md aan het begin van elke sessie. Houd hem onder de 200 regels en bekijk hem bij elke grote opdracht, of wekelijks. Zet stijl per lezer in losse bestanden, zoals <code>werkschrijfstijl.md</code>, <code>gemeenteraadstijl.md</code>, <code>directiestijl.md</code>, <code>huisstijl.md</code> of <code>claude-like-me.md</code>.</p>
 <p><b>Let op:</b> een verwijzing met <code>@bestand.md</code> laadt het bestand altijd mee, dus dat bespaart niets. Schrijf liever in gewone woorden wanneer Claude het moet lezen ("Schrijf je voor de gemeenteraad? Lees dan eerst gemeenteraadstijl.md."), of maak er een skill van.</p>
 
 <h2>Memory, skills, inspanning en vers beginnen</h2>
 <ul><li><b>Auto-memory</b> staat standaard aan: Claude maakt eigen notities en vertrouwt daarop. Met <code>/memory</code> zie je wat erin staat, en kun je het uitzetten. Een bewuste keuze, want het kan je volgende opdrachten helpen of hinderen.</li>
-<li><b>Skills</b>: doe je iets maandelijks of vaker, zeg dan: "Verander wat we zojuist gemaakt hebben in een skill om te bewaren." Ging er later iets mis, vraag Claude dan de skill bij te werken. Een oude skill test je eerst.</li>
-<li><b>Inspanning</b> (<code>/effort</code>): laag voor snel vraag en antwoord, gemiddeld voor routinewerk, hoog als je een fout zoekt, max voor complexe problemen. Combineren kan: maken op gemiddeld, testen en controleren op hoog.</li>
-<li><b>Vers beginnen</b>: in een lange sessie neemt Claude steeds alles mee. Nieuwe deeltaak? <code>/clear</code> of een nieuwe sessie.</li></ul>
+<li><b>Skills</b>: doe je iets maandelijks of vaker, zeg dan: "Verander wat we zojuist gemaakt hebben in een skill om te bewaren." Ging er later iets mis, vraag Claude dan de skill bij te werken. Een oude skill test je eerst. Heb je al resultaten waar je echt blij mee bent, zoals je tien beste notities? Geef die aan Claude en laat het daar een skill van maken. Dan hoef je het proces niet eens uit te leggen.</li>
+<li><b>Inspanning</b> (<code>/effort</code>): de inspanning maakt Claude niet slimmer. Ze bepaalt hoeveel tijd en werk Claude in je opdracht steekt. Hoger is dus niet altijd beter. Stel jezelf deze vragen, in deze volgorde, en stop bij het eerste ja:
+<ol><li>Wil je heen en weer werken, of is het een simpele taak? Kies <b>laag</b>.</li><li>Kost een verborgen fout geld, een klant of een verkeerde beslissing, zoals bij een contract? Kies <b>hoog</b>.</li><li>Geef je een lange, moeilijke klus helemaal uit handen? Kies <b>extra hoog</b> of <b>max</b>.</li><li>Al het andere: <b>gemiddeld</b>. Dat is ook de standaard van Claude Opus 5.5.</li></ol>
+Combineren kan: maken op gemiddeld, testen en controleren op hoog.</li>
+<li><b>Vers beginnen</b>: in een lange sessie neemt Claude steeds alles mee. Nieuwe deeltaak? <code>/clear</code> of een nieuwe sessie.</li>
+<li><b>Op tijd samenvatten</b>: hoe langer het gesprek, hoe meer details Claude mist of door elkaar haalt. Dat begint vaak eerder dan je denkt, lang voordat de context vol is. Blijf je aan dezelfde taak werken? Typ dan zelf <code>/compact</code>, met erachter wat moet blijven: "<code>/compact</code> focus op de besluiten en wat nog moet". Met <code>/autocompact</code> kun je instellen bij hoeveel tokens Claude dat zelf doet, bijvoorbeeld <code>/autocompact 300k</code>. Claude kiest dan wel zelf wat het bewaart. Zie ook <a href="../cheat-sheet/dag-4/">cheat sheet, dag 4: /compact</a>.</li>
+<li><b>Na de lunch liever vers</b>: Claude bewaart je gesprek een tijdje in een tijdelijk geheugen (de cache). Zolang die "warm" is, kost een nieuw bericht veel minder. Met een abonnement duurt dat ongeveer een uur. Kom je later terug, dan wordt je eerste bericht flink duurder. Begin dan liever een nieuwe sessie, en laat Claude eerst een korte overdracht schrijven om mee te nemen.</li></ul>
 
 <h2>Vanaf vandaag</h2>
-<div class="vanaf"><div><b>1</b>Vraag je af: wat kan <em>alleen ik</em> Claude vertellen?</div><div><b>2</b>Schrap de franje: geen lange rol, geen "check je werk", geen HOOFDLETTERS.</div><div><b>3</b>Voeg een pass/fail-lijst toe en laat een verse sessie reviewen.</div><div><b>4</b>Ruim je CLAUDE.md op: onder 200 regels, stijl apart.</div></div>
+<div class="vanaf"><div><b>1</b>Vraag je af: wat kan <em>alleen ik</em> Claude vertellen?</div><div><b>2</b>Schrap de franje: geen lange rol, geen "check je werk", geen HOOFDLETTERS.</div><div><b>3</b>Voeg een pass/fail-lijst toe en laat een verse sessie reviewen.</div><div><b>4</b>Ruim je CLAUDE.md op: onder 200 regels, stijl apart.</div><div><b>5</b>Gaat het mis? Spoel terug en verbeter je prompt, in plaats van te blijven corrigeren.</div></div>
 <div class="knoppen"><a href="oefening-briefing/">Oefening: een scherpe briefing →</a><a class="licht" href="oefening-claude-md/">Oefening: CLAUDE.md opschonen →</a></div>
 
 <h2>Bronnen</h2>
@@ -78,7 +99,11 @@
 <li><a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Claude Code: Best practices</a></li>
 <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5" target="_blank" rel="noopener">Prompting Claude Opus 5</a></li>
 <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener">Prompting best practices</a></li>
-<li><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">CLAUDE.md en memory</a></li></ul>
+<li><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">CLAUDE.md en memory</a></li>
+<li><a href="https://code.claude.com/docs/en/checkpointing" target="_blank" rel="noopener">Checkpointing (/rewind)</a></li>
+<li><a href="https://code.claude.com/docs/en/costs" target="_blank" rel="noopener">Kosten en /compact</a></li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/effort" target="_blank" rel="noopener">Effort</a></li>
+<li>Aanvulling van 24 november 2026: een YouTube-video met vijftien tips voor werken met de nieuwste Claude-modellen.</li></ul>
 </article>
 </div></main>
 <footer class="voet"><a href="../sitemap/">Sitemap</a></footer>
