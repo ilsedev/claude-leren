@@ -14,26 +14,19 @@
 <div class="intro"><p>De nieuwste Claude-modellen hebben geen lange prompts meer nodig, wel duidelijke. Wat mag weg, hoe brief je Claude in vijf onderdelen, en de kernvraag: welke informatie kan alleen jij geven? Alle voorbeelden gaan over één dashboard met acht jaar energiedata. Onder het filmpje staat het hele artikel. Daarna vind je kant-en-klare prompts en een skill die je kunt downloaden.</p></div>
 <main><div class="inner"><a class="terug" href="../">← Alle filmpjes</a><div class="video"><video src="filmpje.mp4?v=3" controls preload="metadata" playsinline></video></div>
 <article class="dagpagina artikel">
-<h2>De kernvraag</h2>
-<div class="kernvraag">Welke informatie kan <em>alleen jij</em> geven?</div>
-<p>Dat moet Claude echt van jou horen. Hoe je een dashboard bouwt, weet hij al. Je bestanden voeg je gewoon toe. Korter prompten betekent dus niet vager prompten: wat je weglaat aan franje, stop je in een scherpe briefing.</p>
-<p>In de voorbeelden hieronder werk ik steeds aan hetzelfde: <b>een dashboard van acht jaar energiedata uit Excel</b>, met de meterstanden en de vraag of de warmtepomp het waard was.</p>
-<ul><li><b>Wat alleen jij weet:</b> "Ik wil weten of de warmtepomp het waard was. Vergelijk de jaren vóór en ná de installatie."</li>
-<li><b>Je bestanden en links:</b> <code>energiedata-2018-2025.xlsx</code>, <code>voorbeeld-grafiek.png</code></li></ul>
-
 <h2>Dit mag weg</h2>
 <h3>De rolbeschrijving</h3>
 <p><s>"Je bent een ervaren data-analist met twintig jaar ervaring…"</s> Een rolbeschrijving is niet meer nodig. Vertel liever kort waar je aan werkt, zoals aan een collega: "Ik ben bezig met een analyse van acht jaar energiedata uit een Excel-bestand."</p>
 <h3>HOOFDLETTERS en NOOIT</h3>
 <p><s>"Gebruik NOOIT jargon!!!"</s> Gewone zinnen werken beter, het liefst met de reden erbij: "Mijn lezers zijn geen techneuten, dus vermijd vakjargon." HOOFDLETTERS en NOOIT maken een regel zwaarder dan je bedoelt. Vaste regels zet je beter één keer in je vaste instructies, zoals de projectinstructies of je CLAUDE.md.</p>
 <h3>"Check je werk"</h3>
-<p>Claude Opus 5 controleert zijn eigen werk al. Een algemene regel als "check je werk" laat hem alleen nog een keer doen wat hij al deed. Dat kost tokens en het antwoord wordt er niet beter van. Anthropic noemt dat <em>over-verification</em>. Wat wel werkt: een checklist met ja/nee-vragen (zie de briefing hieronder).</p>
+<p>De nieuwste Claude-modellen controleren hun eigen werk al. Een algemene regel als "check je werk" laat Claude alleen nog een keer doen wat hij al deed. Dat kost tokens en het antwoord wordt er niet beter van. Wat wel werkt: een checklist met ja/nee-vragen (zie de briefing hieronder).</p>
 
 <h3>Was en wordt in één overzicht</h3>
 <div class="ww"><div class="ww-rij"><div>Was: tot een paar weken geleden</div><div></div><div>Wordt: vanaf nu</div></div>
 <div class="ww-rij"><div class="ww-was"><s>"Je bent een ervaren data-analist met twintig jaar ervaring…"</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Vertel waar je aan werkt</b>, zoals aan een collega.<span class="ww-bron">Prompting-gids van Anthropic: "Even a single sentence makes a difference."</span></div></div>
 <div class="ww-rij"><div class="ww-was"><s>ZEER BELANGRIJK, ALTIJD, NOOIT</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Gewone zinnen</b>, met de reden erbij.<span class="ww-bron">Anthropic: "What you can stop doing"</span></div></div>
-<div class="ww-rij"><div class="ww-was"><s>"Check je werk."</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Een checklist met ja/nee-vragen</b> die Claude afloopt vóór het resultaat.<span class="ww-bron">Anthropic: Opus 5 controleert zichzelf al</span></div></div>
+<div class="ww-rij"><div class="ww-was"><s>"Check je werk."</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Een checklist met ja/nee-vragen</b> die Claude afloopt vóór het resultaat.<span class="ww-bron">Anthropic: de nieuwste modellen controleren zichzelf al</span></div></div>
 <div class="ww-rij"><div class="ww-was"><s>Een lange prompt waarin je alles zelf uitschrijft</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Een korte briefing in vijf onderdelen</b>, of laat Claude je interviewen.</div></div>
 <div class="ww-rij"><div class="ww-was"><s>Je vaste werkinstructie (SOP) altijd meegeven</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag nieuw">Nieuw</span><b>Eerst een plan van Claude</b>, en jij geeft akkoord.</div></div>
 <div class="ww-rij"><div class="ww-was"><s>"Denk goed na." "Ga door, niet lui zijn."</s></div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag anders">Anders</span><b>Het juiste inspanningsniveau</b> (<code>/effort</code>).<span class="ww-bron">Anthropic: "What you can stop doing"</span></div></div>
@@ -44,6 +37,13 @@
 <div class="ww-rij"><div class="ww-was">Voorbeelden van goed resultaat</div><div class="ww-pijl">→</div><div class="ww-wordt"><span class="tag blijft">Blijft</span><b>Blijft.</b> Nu als onderdeel 'Voorbeelden van goed'.</div></div>
 </div>
 <blockquote>"Every one of these was good advice when it was written. Most were workarounds for something the model couldn't reliably do yet, and the models have since caught up. If a few are still habits, here's why it's safe to drop them."<cite>Anthropic, Claude Code-documentatie: Best practices, "What you can stop doing"</cite></blockquote>
+
+<h2>De kernvraag</h2>
+<div class="kernvraag">Welke informatie kan <em>alleen jij</em> geven?</div>
+<p>Dat moet Claude echt van jou horen. Hoe je een dashboard bouwt, weet hij al. Je bestanden voeg je gewoon toe. Korter prompten betekent dus niet vager prompten: wat je weglaat aan franje, stop je in een scherpe briefing.</p>
+<p>In de voorbeelden hieronder werk ik steeds aan hetzelfde: <b>een dashboard van acht jaar energiedata uit Excel</b>, met de meterstanden en de vraag of de warmtepomp het waard was.</p>
+<ul><li><b>Wat alleen jij weet:</b> "Ik wil weten of de warmtepomp het waard was. Vergelijk de jaren vóór en ná de installatie."</li>
+<li><b>Je bestanden en links:</b> <code>energiedata-2018-2025.xlsx</code>, <code>voorbeeld-grafiek.png</code></li></ul>
 
 <h2>Briefen, zoals aan een collega</h2>
 <p>Een goede briefing heeft vijf onderdelen:</p>
@@ -110,7 +110,7 @@ Combineren kan: maken op gemiddeld, testen en controleren op hoog.</li>
 <li><b>Na de lunch liever vers</b>: Claude bewaart je gesprek een tijdje in een tijdelijk geheugen (de cache). Zolang die "warm" is, kost een nieuw bericht veel minder. Met een abonnement duurt dat ongeveer een uur. Kom je later terug, dan wordt je eerste bericht flink duurder. Begin dan liever een nieuwe sessie, en laat Claude eerst een korte overdracht schrijven om mee te nemen.</li></ul>
 
 <h2>Vanaf vandaag</h2>
-<div class="vanaf"><div><b>1</b>Vraag je af: welke informatie kan <em>alleen ik</em> geven?</div><div><b>2</b>Laat de franje weg: geen rolbeschrijving, geen HOOFDLETTERS, geen "check je werk".</div><div><b>3</b>Brief in vijf onderdelen: doel, echte gegevens, voorbeelden van goed, 'klaar' en een checklist.</div><div><b>4</b>Weet je nog niet hoe 'klaar' eruitziet? Laat Claude je interviewen.</div><div><b>5</b>Vraag eerst om een plan, en geef pas daarna akkoord.</div></div>
+<div class="vanaf"><div><b>1</b>Laat de franje weg: geen rolbeschrijving, geen HOOFDLETTERS, geen "check je werk".</div><div><b>2</b>Vraag je af: welke informatie kan <em>alleen ik</em> geven?</div><div><b>3</b>Brief in vijf onderdelen: doel, echte gegevens, voorbeelden van goed, 'klaar' en een checklist.</div><div><b>4</b>Weet je nog niet hoe 'klaar' eruitziet? Laat Claude je interviewen.</div><div><b>5</b>Vraag eerst om een plan, en geef pas daarna akkoord.</div></div>
 <div class="knoppen"><a href="prompts/">Kant-en-klare prompts →</a><a class="licht" href="prompts/#interview">Interview zonder skill →</a></div>
 
 <h2>Bronnen</h2>
